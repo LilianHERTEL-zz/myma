@@ -13,7 +13,7 @@ export class TeamComponent implements OnInit {
   constructor(private navigationService: NavigationService) {}
 
   onContactClick() {
-    //this.navigationService.selectLink('contact');
+    // this.navigationService.selectLink('contact');
   }
 
   ngOnInit(): void {}

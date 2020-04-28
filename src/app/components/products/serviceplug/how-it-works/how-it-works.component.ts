@@ -24,20 +24,23 @@ export class HowItWorksComponent implements AfterViewChecked {
     {
       title: 'STEP 2',
       subtitle: 'Instantly connect with your customers.',
-      content: "Directly engage with your end users in real time with our supplied dashboard. Perform market research, R&D, schedule services, detect faults, upsell other SDA products and much more with myma.io",
+      content:
+        'Directly engage with your end users in real time with our supplied dashboard. Perform market research, R&D, schedule services, detect faults, upsell other SDA products and much more with myma.io',
     },
     {
       title: 'STEP 3',
       subtitle: 'Fault detected.',
-      content: "With over 60M events harnessed every day, we can literally here a 'digital' pin drop. When a fault is detected we automatically send push notifications to you and your customers.",
+      content:
+        "With over 60M events harnessed every day, we can literally here a 'digital' pin drop. When a fault is detected we automatically send push notifications to you and your customers.",
     },
     {
       title: 'STEP 4',
       subtitle: 'Call outs / Scheduled maintenance.',
-      content: 'A Scheduled call out will take place, before the machine has even broken down!',
+      content:
+        'A Scheduled call out will take place, before the machine has even broken down!',
     },
   ];
-  
+
   @ViewChild('higherCard') elementView: ElementRef;
 
   contentHeight: number;
