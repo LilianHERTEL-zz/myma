@@ -25,7 +25,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-
+    - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
+      
     - name: Prepare and deploy
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -40,6 +41,6 @@ jobs:
         # npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js --webdriver-update=false
         ####
         # Below is the version using angular-cli-ghpages
-        # npm run ng -- deploy --base-href=/myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
+        npm run ng -- deploy --base-href=/myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
         # Below is the basic version
-        ng build --prod --output-path docs --base-href /myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
+        # ng build --prod --output-path docs --base-href /myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
