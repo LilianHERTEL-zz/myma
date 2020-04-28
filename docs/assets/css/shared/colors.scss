@@ -1,0 +1,35 @@
+/* COLORS */
+:root {
+  --bg-primary: #652780;
+  --bg-primary-light: #793b94;
+  --bg-secondary: #e62577;
+
+  //--bg-light: #fafafa;
+  --bg-light: white;
+}
+
+.text-color-primary {
+  color: var(--bg-primary);
+}
+.text-color-primary-light {
+  color: var(--bg-primary-light);
+}
+.text-color-secondary {
+  color: var(--bg-secondary);
+}
+.text-color-light {
+  color: var(--bg-light);
+}
+
+.background-color-primary {
+  background-color: var(--bg-primary);
+}
+.background-color-primary-light {
+  background-color: var(--bg-primary-light);
+}
+.background-color-secondary {
+  background-color: var(--bg-secondary);
+}
+.background-color-light {
+  background-color: var(--bg-light) !important;
+}
