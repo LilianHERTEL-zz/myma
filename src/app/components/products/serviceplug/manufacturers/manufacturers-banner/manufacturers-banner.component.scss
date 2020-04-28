@@ -1,0 +1,75 @@
+.manufacturers-banner-image {
+  object-fit: contain;
+}
+
+.image-col {
+  border-bottom: 0.15rem solid var(--bg-secondary);
+}
+
+.manufacturers-banner-right {
+  justify-content: center;
+}
+
+.text {
+  text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .manufacturers-banner-right {
+      padding-right: 2rem !important;
+      padding-left: 2rem !important;
+      padding-bottom: 5rem !important;
+      padding-top: 5rem !important;
+    }
+  
+    .text {
+      text-align: center;
+      padding: 0 !important;
+    }
+  
+    .meet-button {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .manufacturers-banner-right {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+  }
+  
+  .manufacturers-banner-right:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    right: 100%;
+    z-index: 1;
+  }
+  .manufacturers-banner-right:after {
+    bottom: 0;
+    background: linear-gradient(
+      to left bottom,
+      var(--bg-primary) 50%,
+      transparent 50.3%
+    );
+  }
+  .manufacturers-banner-right:before {
+    content: "";
+    position: absolute;
+    width: calc(150px + 0.15rem);
+    height: 100%;
+    right: 100%;
+    z-index: 1;
+    border-right: 0.15rem solid var(--bg-secondary);
+  }
+  .manufacturers-banner-right:before {
+    bottom: 0;
+    background: linear-gradient(
+      to left bottom,
+      var(--bg-secondary) 50%,
+      transparent 50.3%
+    );
+  }
+  

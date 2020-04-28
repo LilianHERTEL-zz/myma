@@ -1,0 +1,17 @@
+.maps-frame {
+  border-radius: 0.5rem;
+}
+
+.map-div {
+  height: 20rem;
+}
+
+.location-text {
+  text-align: justify;
+}
+
+@media (max-width: 992px) {
+  .maps-div {
+    padding-left: 2rem !important;
+  }
+}

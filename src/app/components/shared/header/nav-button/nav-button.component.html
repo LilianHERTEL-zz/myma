@@ -1,0 +1,19 @@
+<hr class="m-0 d-lg-none">
+<li class="nav-item">
+  <a
+    *ngIf="route"
+    class="nav-link"
+    [class.active]="isActive() && (!inDropdown)"
+    [class.activeInDropdown]="isActive() && (inDropdown)"
+    routerLink="{{ route }}"
+    >{{ text }}</a
+  >
+  <a
+    *ngIf="link"
+    class="nav-link"
+    [class.active]="isActive() && (!inDropdown)"
+    [class.activeInDropdown]="isActive() && (inDropdown)"
+    href="{{ link }}"
+    >{{ text }}</a
+  >
+</li>

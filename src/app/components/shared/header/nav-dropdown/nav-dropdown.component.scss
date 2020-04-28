@@ -1,0 +1,132 @@
+.nav-link {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  color: var(--bg-primary) !important;
+  font-weight: bold;
+  transition: 0.2s;
+  //border-top: .3rem solid var(--bg-light);
+}
+
+@media (min-width: 992px) {
+  .nav-item:hover .nav-link:not(.dropdown-clickable),
+  .dropdown-clickable:hover {
+    //background-color: var(--bg-secondary);
+    color: var(--bg-secondary) !important;
+  }
+}
+
+.active > a {
+  position: relative;
+  color: var(--bg-secondary) !important;
+}
+
+.activeInDropdown > a {
+  color: var(--bg-secondary) !important;
+}
+
+// Large screen version active link
+.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  z-index: 1000000;
+  background-color: var(--bg-secondary);
+  border-radius: 0 0 9999px 9999px;
+  animation: 0.2s ease-out link-active;
+}
+@keyframes link-active {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Small screen version active link
+@media (max-width: 991px) {
+  .active:after {
+    width: 0.3rem;
+    height: 100%;
+    border-radius: 0 9999px 9999px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .toggledown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown .toggledown::after {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+  }
+
+  .menudown,
+  .menuright {
+    display: block;
+  }
+
+  .dropdown:hover .menudown,
+  .dropright:hover .menuright {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  .dropdown-menu {
+    width: max-content;
+    display: block;
+    z-index: -10;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+  }
+
+  
+}
+
+// Dropdown links height
+.dropdown {
+  height: 100%;
+}
+.dropdown-toggle {
+  height: 100%;
+  justify-content: center;
+}
+.nav-item {
+  line-height: 2rem !important;
+}
+
+.dropdown-menu {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  //border-left: 0.15rem solid var(--bg-secondary) !important;
+  padding: 0 !important;
+  background-color: var(--bg-light) !important;
+}
+
+@media (max-width: 991px) {
+  li.nav-item.dropdown.show:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.3rem;
+    height: 100%;
+    z-index: 1000000;
+    background-color: var(--bg-primary);
+    border-radius: 0 9999px 9999px 0;
+  }
+
+  .shadow-sm {
+    box-shadow: none !important;
+  }
+}

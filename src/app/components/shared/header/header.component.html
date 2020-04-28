@@ -1,0 +1,102 @@
+<header class="z-index-1">
+  <nav
+    class="fixed-top navbar navbar-expand-lg navbar-light background-color-light shadow-sm"
+    data-toggle="collapse"
+    data-target=".navbar-collapse.show"
+  >
+    <div class="navbar-logo">
+      <a class="navbar-brand padding-left-2 padding-right-2" routerLink="/">
+        <img src="/assets/images/myma-logo-p-500.png" height="30" alt="" />
+      </a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <app-nav-buttons-container #buttonsContainer>
+        <app-nav-button [route]="'/'" [text]="'Home'"></app-nav-button>
+        <app-nav-dropdown
+          [route]="'products'"
+          [text]="'Products'"
+          [direction]="'down'"
+        >
+          <app-nav-button
+            [inDropdown]="'true'"
+            [link]="'https://wifiplug.co.uk/'"
+            [text]="'WifiPlug'"
+          ></app-nav-button>
+
+          <!-- Serviceplug submenu - LARGE SCREENS -->
+          <app-nav-dropdown
+            [inDropdown]="'true'"
+            class="serviceplug-menu-large"
+            [clickable]="'true'"
+            [route]="'serviceplug'"
+            [text]="'Serviceplug'"
+            [direction]="'right'"
+          >
+            <app-nav-button
+              [inDropdown]="'true'"
+              [route]="'serviceplug/consumers'"
+              [text]="'For consumers'"
+            ></app-nav-button>
+            <app-nav-button
+              [inDropdown]="'true'"
+              [route]="'serviceplug/manufacturers'"
+              [text]="'For manufacturers'"
+            ></app-nav-button>
+          </app-nav-dropdown>
+          <!-- Serviceplug submenu - SMALL SCREENS -->
+          <div class="serviceplug-menu-small">
+            <div class="second-dropdown">
+              <app-nav-button
+                [inDropdown]="'true'"
+                [route]="'serviceplug'"
+                [text]="'Serviceplug'"
+              ></app-nav-button>
+              <div>
+                <app-nav-button
+                  [inDropdown]="'true'"
+                  [route]="'serviceplug/consumers'"
+                  [text]="'For consumers'"
+                  class="no-border"
+                ></app-nav-button>
+                <app-nav-button
+                  [inDropdown]="'true'"
+                  [route]="'serviceplug/manufacturers'"
+                  [text]="'For manufacturers'"
+                  class="no-border"
+                ></app-nav-button>
+              </div>
+            </div>
+          </div>
+
+          <app-nav-button
+            [inDropdown]="'true'"
+            [route]="'whitelabel'"
+            [text]="'White Labeling'"
+          ></app-nav-button>
+          <app-nav-button
+            [inDropdown]="'true'"
+            [route]="'consulting'"
+            [text]="'Consulting'"
+          ></app-nav-button>
+        </app-nav-dropdown>
+        <app-nav-button
+          [route]="'company'"
+          [text]="'About Us'"
+        ></app-nav-button>
+        <app-nav-button [route]="'contact'" [text]="'Contact'"></app-nav-button>
+        <div class="full-height background-color-light d-lg-none"></div>
+      </app-nav-buttons-container>
+    </div>
+  </nav>
+</header>

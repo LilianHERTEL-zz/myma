@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg">
+  <li
+    class="nav-item active btn btn-primary font-weight-bold m-1 flex-grow-1 tab-button"
+    *ngFor="let tab of tabs"
+    (click)="selectTab(tab)"
+    [class.inactive]="!tab.active"
+  >
+    {{ tab.tabTitle }}
+  </li>
+</nav>
+
+<div class="container-fluid">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,21 @@
+/*.team-div {
+  width: fit-content !important;
+}*/
+
+@media (max-width: 576px) {
+  .title-button-div {
+    justify-content: center;
+  }
+}
+
+/*
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-right: 5rem !important;
+  }
+}
+*/
+
+.btn {
+  width: fit-content;
+}

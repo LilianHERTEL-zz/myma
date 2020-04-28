@@ -1,0 +1,17 @@
+<div id="manufacturers-anchor" class="container padding-top-5 padding-bottom-5">
+    <div class="row m-0">
+      <div *ngFor="let info of infoList" class="col-md-4">
+        <div class="card border-0">
+          <div class="card-body">
+            <h4 class="card-title text-color-primary">{{ info.title }}</h4>
+            <h6 class="card-subtitle text-color-secondary margin-bottom-1">
+              {{ info.subtitle }}
+            </h6>
+            <p class="card-text">
+              {{ info.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
