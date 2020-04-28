@@ -42,4 +42,4 @@ jobs:
         # Below is the version using angular-cli-ghpages
         # npm run ng -- deploy --base-href=/myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
         # Below is the basic version
-        npm run ng build --prod --output-path docs --base-href /myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
+        ng build --prod --output-path docs --base-href /myma/ --name="Myma deployment bot" --email=lilian.he@outlook.fr
