@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/shared/fonts.scss";
+@import "assets/css/shared/colors.scss";
+@import "assets/css/shared/paddings.scss";
+@import "assets/css/shared/margins.scss";
+@import "assets/css/shared/scrollbars.scss";
+
+body {
+  overflow-x: hidden !important;
+  background-color: var(--bg-light) !important;
+}
+
+.height-100 {
+  height: 100% !important;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .height-vp-full {
+    height: 100vh;
+  }
+}
+
+.btn {
+  border-radius: 0.5rem !important;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.btn-primary {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--bg-primary) !important;
+}
+.btn-secondary {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--bg-secondary) !important;
+}
+.btn-light {
+  background-color: var(--bg-light) !important;
+  border-color: var(--bg-light) !important;
+  color: var(--bg-primary) !important;
+}
+
+.btn:not(.tab-button):hover {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--bg-secondary) !important;
+}
+.btn-secondary:not(.tab-button):hover {
+  background-color: var(--bg-primary-light) !important;
+  border-color: var(--bg-primary-light) !important;
+}
+
+.border-top-secondary {
+  border-top: 0.15rem solid var(--bg-secondary);
+}
+.border-bottom-secondary {
+  border-bottom: 0.15rem solid var(--bg-secondary);
+}
+
+.border-bottom-light {
+  border-bottom: 0.15rem solid var(--bg-light);
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.no-border * {
+  border: none !important;
+}
