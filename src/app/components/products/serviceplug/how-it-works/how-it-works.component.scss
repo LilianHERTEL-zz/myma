@@ -24,15 +24,13 @@
   padding-right: 0;
 }
 
+.howItWorks-container {
+  padding: 0;
+}
+
 @media (max-width: 992px) {
   .howItWorks-container {
-    padding-left: 0;
     width: auto;
-  }
-
-  .howItWorks-step {
-    //min-height: 20vh;
-    //border: 1px solid red;
   }
 
   .card-body {
