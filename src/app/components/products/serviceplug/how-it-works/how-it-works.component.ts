@@ -41,10 +41,6 @@ export class HowItWorksComponent implements AfterViewChecked {
     },
   ];
 
-  @ViewChild('higherCard') elementView: ElementRef;
-
-  contentHeight: number;
-
   constructor() {}
 
   ngAfterViewChecked() {

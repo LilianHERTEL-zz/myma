@@ -7,6 +7,7 @@
 
 body {
   overflow-x: hidden !important;
+  //overflow-y: hidden !important;
   background-color: var(--bg-light) !important;
 }
 
@@ -19,7 +20,7 @@ body {
 }
 
 .height-vp-full {
-  height: 100vh;
+  height: calc(100vh - 80px) !important;
 }
 
 @media (max-width: 992px) {

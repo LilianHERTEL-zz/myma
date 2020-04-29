@@ -1,1 +1,51 @@
-<p>consumers-banner works!</p>
+<div class="container-fluid p-0 spacing-0">
+  <div class="row m-0 banner-row height-vp-full">
+    <div
+      class="col-lg-8 image-col padding-left-2 padding-right-2 z-index-1"
+    >
+      <div class="row m-0 height-100 align-items-center">
+        <div class="col-4">
+          <img
+            class="consumers-banner-image img-fluid"
+            src="assets/images/Navigation_Drawer_iOS.png"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            class="consumers-banner-image img-fluid"
+            src="assets/images/Wash_History_Screen_iOS.png"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            class="consumers-banner-image img-fluid"
+            src="assets/images/Service_Screen_iOS.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-4 height-vp-full padding-right-4 d-flex flex-column justify-content-center consumers-banner-right text-center background-color-primary"
+    >
+      <div>
+        <div class="text-color-light">
+          <h1 class="font-weight-bold padding-bottom-1">
+            Consumer benefits
+          </h1>
+          <h4 class="padding-bottom-1">
+            Save money, extend the machine's life and get an extended warranty!
+          </h4>
+        </div>
+        <div class="margin-top-1">
+          <button
+            type="button"
+            (click)="onMoreClick('consumers-anchor')"
+            class="btn btn-secondary font-weight-bold meet-button"
+          >
+            Discover
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
