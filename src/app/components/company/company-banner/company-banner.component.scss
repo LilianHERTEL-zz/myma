@@ -2,6 +2,27 @@
   object-fit: cover;
 }
 
+@media (min-width: 992px) {
+  .company-banner-image {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .company-banner-right {
+    height: auto !important;
+  }
+  .company-banner-image {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .image-col {
+    max-height: 50% !important;
+  }
+}
+
 .image-col {
   border-bottom: 0.15rem solid var(--bg-secondary);
 }

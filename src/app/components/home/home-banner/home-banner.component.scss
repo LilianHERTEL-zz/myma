@@ -1,7 +1,8 @@
-@media (min-width: 992px) {
-  .banner-div {
-    height: 100vh;
-    width: 100vw;
+@media (max-width: 992px) {
+  .banner-text {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-top: 9rem !important;
   }
 }
 
@@ -9,6 +10,8 @@
   background-image: url(src/assets/images/shutterstock_1208917930.jpg);
   background-size: cover;
   background-position-x: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .banner-text {

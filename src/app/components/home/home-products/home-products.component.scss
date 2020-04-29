@@ -6,10 +6,6 @@ article .container-fluid .row .col-lg:nth-child(odd),
   background-color: #d0d0d0 /*var(--bg-light)*/;
 }
 
-.product-col .product-text {
-  text-align: justify;
-}
-
 .with-border {
   border-left: 0.1rem solid var(--bg-light);
   border-right: 0.1rem solid var(--bg-light);
