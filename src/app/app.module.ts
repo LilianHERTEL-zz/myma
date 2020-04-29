@@ -34,6 +34,8 @@ import { LearnMoreComponent } from './components/products/serviceplug/learn-more
 import { MatchHeightDirective } from './directives/match-height.directive';
 import { ManufacturersBannerComponent } from './components/products/serviceplug/manufacturers/manufacturers-banner/manufacturers-banner.component';
 import { ManufacturersInfoComponent } from './components/products/serviceplug/manufacturers/manufacturers-info/manufacturers-info.component';
+import { ConsumersBannerComponent } from './components/products/serviceplug/consumers/consumers-banner/consumers-banner.component';
+import { ConsumersInfoComponent } from './components/products/serviceplug/consumers/consumers-info/consumers-info.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { ManufacturersInfoComponent } from './components/products/serviceplug/ma
     LearnMoreComponent,
     MatchHeightDirective,
     ManufacturersBannerComponent,
-    ManufacturersInfoComponent
+    ManufacturersInfoComponent,
+    ConsumersBannerComponent,
+    ConsumersInfoComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
