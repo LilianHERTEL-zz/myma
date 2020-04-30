@@ -1,0 +1,6 @@
+@media (max-width: 992px) {
+  ul.navbar-nav {
+    overflow-y: scroll !important;
+    height: calc(100vh - 74px) !important;
+  }
+}
