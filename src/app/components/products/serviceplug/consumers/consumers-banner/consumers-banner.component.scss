@@ -24,14 +24,36 @@
   }
 }
 
+@media (max-width: 576px) {
+  #consumers-banner-img-1,
+  #consumers-banner-img-2 {
+    display: none;
+  }
+
+  #consumers-banner-img-3 {
+    max-width: none !important;
+    flex: auto !important;
+  }
+
+  .image-col {
+    text-align: center;
+  }
+}
+
 @media (max-width: 992px) {
   .consumers-banner-right {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+    height: auto !important;
   }
 
   .banner-row {
-    height: 100vh !important;
+    flex-direction: column-reverse !important;
+    height: auto !important;
+  }
+
+  .banner-row .row {
+    margin-top: -2.1rem !important;
   }
 
   .border-bottom-light {
