@@ -9,3 +9,10 @@ a {
   margin-bottom: var(--spacing-half);
   color: var(--bg-primary-light);
 }
+
+.email-field {
+  border-radius: .5rem 0 0 .5rem !important;
+}
+.email-button {
+  border-radius: 0 .5rem .5rem 0 !important;
+}
