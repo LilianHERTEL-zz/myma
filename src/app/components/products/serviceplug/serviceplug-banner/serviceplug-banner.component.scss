@@ -1,11 +1,9 @@
 .serviceplug-logo {
   height: 32px;
-  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 992px) {
     .banner-div {
-      height: 100vh;
       width: 100vw;
     }
   }
@@ -13,7 +11,7 @@
   .banner-div {
     background-image: url(src/assets/images/shutterstock_1208917930.jpg);
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
   }
   
   .banner-text {
