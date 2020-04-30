@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+.width-vp-full {
+  width: 100vw !important;
+}
+
 .height-vp-full {
   height: calc(100vh - 80px) !important;
 }
