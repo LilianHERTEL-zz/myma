@@ -17,11 +17,7 @@
 }
 .card-text {
   color: var(--bg-light);
-  text-align: justify;
-}
-
-.card-body {
-  padding-right: 0;
+  //text-align: justify;
 }
 
 .howItWorks-container {
@@ -65,6 +61,9 @@
   .howItWorks-container .row {
     height: 20.5rem;
     overflow: visible;
+  }
+  .card-body {
+    padding-right: 0;
   }
   .card-text {
     //z-index: -1;

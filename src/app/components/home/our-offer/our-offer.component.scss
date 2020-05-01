@@ -32,3 +32,11 @@ ul {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
 }
+
+@media (max-width: 992px) {
+  .tab-container {
+    max-width: none !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
