@@ -15,7 +15,7 @@
   text-align: justify;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.9px) {
   .manufacturers-banner-right {
     padding: 0 !important;
     padding-right: 1rem !important;
@@ -31,7 +31,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
   .manufacturers-banner-right {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
@@ -54,7 +54,7 @@
     object-position: bottom !important;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991.9px) {
   .col-md-8 {
     flex: 0 0 60%;
     max-width: 60%;

@@ -28,7 +28,7 @@
   padding: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.9px) {
   .howItWorks-container {
     width: auto;
   }
@@ -126,7 +126,7 @@
 }
 
 // Small display version
-@media (max-width: 992px) {
+@media (max-width: 991.9px) {
   .howItWorks-step:after,
   .howItWorks-step:before {
     width: 50%;

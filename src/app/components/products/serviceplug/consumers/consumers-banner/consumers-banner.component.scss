@@ -6,7 +6,7 @@
   text-align: justify;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.9px) {
   .consumers-banner-right {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.9px) {
   #consumers-banner-img-1,
   #consumers-banner-img-2 {
     display: none;
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.9px) {
   .consumers-banner-right {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -65,7 +65,7 @@
     object-position: bottom !important;
   }
 }
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 991.9px) {
   .image-col {
     max-height: 50% !important;
   }
