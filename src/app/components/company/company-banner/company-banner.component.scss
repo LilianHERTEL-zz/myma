@@ -1,26 +1,6 @@
 .company-banner-image {
   object-fit: cover;
-}
-
-@media (min-width: 992px) {/*
-  .company-banner-image {
-    height: 100vh;
-  }*/
-}
-
-@media (max-width: 992px) {
-  .company-banner-right {
-    height: auto !important;
-  }
-  .company-banner-image {
-    height: 100% !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  .image-col {
-    max-height: 50% !important;
-  }
+  object-position: center;
 }
 
 .image-col {
@@ -37,10 +17,8 @@
 
 @media (max-width: 992px) {
   .company-banner-right {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 0 !important;
+    padding-right: 1rem !important;
   }
 
   .text {
@@ -50,6 +28,46 @@
 
   .meet-button {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-banner-right {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    height: max-content !important;
+    background: var(--bg-primary);
+  }
+
+  .banner-row {
+    height: 100vh !important;
+  }
+
+  .border-bottom-light {
+    border: none !important;
+  }
+
+  .company-banner-image {
+    height: 100% !important;
+    object-position: bottom !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-md-8,
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .text,
+  h1,
+  h4 {
+    margin: 0 !important;
+  }
+  .meet-button {
+    margin-top: 1rem !important;
   }
 }
 

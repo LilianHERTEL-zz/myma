@@ -17,10 +17,8 @@
 
 @media (max-width: 992px) {
   .manufacturers-banner-right {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-    padding-bottom: 5rem !important;
-    padding-top: 5rem !important;
+    padding: 0 !important;
+    padding-right: 1rem !important;
   }
 
   .text {
@@ -28,18 +26,19 @@
     padding: 0 !important;
   }
 
-  .meet-button {
+  .discover-button {
     margin-top: 1.5rem;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .manufacturers-banner-right {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
-    height: auto !important;
+    height: max-content !important;
+    background: var(--bg-primary);
   }
 
   .banner-row {
@@ -55,12 +54,23 @@
     object-position: bottom !important;
   }
 }
-@media (min-width: 576px) and (max-width: 992px) {
-  .image-col {
-    max-height: 50% !important;
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-md-8 {
+    flex: 0 0 60%;
+    max-width: 60%;
   }
-  .manufacturers-banner-image {
-    object-fit: cover !important;
+  .col-md-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .text,
+  h1,
+  h4 {
+    margin: 0 !important;
+  }
+  .discover-button {
+    margin-top: 1rem !important;
   }
 }
 
