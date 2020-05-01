@@ -1,67 +1,36 @@
 .network-image {
-    height: 48px;
-    border: .15rem solid var(--bg-light);
-    border-radius: 50px;
+  height: 48px;
+  border: 0.15rem solid var(--bg-light);
+  border-radius: 50px;
 }
 
 .network-link:hover {
-    transform: scale(1.1);
-    transition: .1s;
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
-.company-banner-image {
-  object-fit: cover;
-}
-
-@media (min-width: 992px) {
-  /*
-    .company-banner-image {
-      height: 100vh;
-    }*/
-}
-
-@media (max-width: 992px) {
-  .company-banner-right {
-    height: auto !important;
-  }
-  .company-banner-image {
-    height: 100% !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-  .image-col {
-    max-height: 50% !important;
-  }
-}
-
-.company-banner-right {
+.contact-banner-right {
   justify-content: center;
 }
 
-.text {
-  text-align: justify;
-}
-
 @media (max-width: 992px) {
-  .company-banner-right {
+  .contact-banner-row {
+      flex-direction: column !important;
+  }
+
+  .contact-banner-right {
+    height: auto !important;
+  }
+
+  .contact-banner-right {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
-  .text {
-    text-align: center;
-    padding: 0 !important;
-  }
-
-  .meet-button {
-    margin-top: 1.5rem;
-  }
 }
 
-.company-banner-right:after {
+.contact-banner-right:after {
   content: "";
   position: absolute;
   width: 150px;
@@ -69,7 +38,7 @@
   right: 100%;
   z-index: 1;
 }
-.company-banner-right:after {
+.contact-banner-right:after {
   bottom: 0;
   background: linear-gradient(
     to left bottom,
@@ -77,7 +46,7 @@
     transparent 50.3%
   );
 }
-.company-banner-right:before {
+.contact-banner-right:before {
   content: "";
   position: absolute;
   width: calc(150px + 0.15rem);
@@ -86,7 +55,7 @@
   z-index: 1;
   border-right: 0.15rem solid var(--bg-secondary);
 }
-.company-banner-right:before {
+.contact-banner-right:before {
   bottom: 0;
   background: linear-gradient(
     to left bottom,
