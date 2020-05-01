@@ -16,3 +16,10 @@ a {
 .email-button {
   border-radius: 0 .5rem .5rem 0 !important;
 }
+
+@media (max-width: 768px) {
+  .second-col {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+}
