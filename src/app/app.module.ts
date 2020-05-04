@@ -36,6 +36,7 @@ import { ManufacturersBannerComponent } from './components/products/serviceplug/
 import { ManufacturersInfoComponent } from './components/products/serviceplug/manufacturers/manufacturers-info/manufacturers-info.component';
 import { ConsumersBannerComponent } from './components/products/serviceplug/consumers/consumers-banner/consumers-banner.component';
 import { ConsumersInfoComponent } from './components/products/serviceplug/consumers/consumers-info/consumers-info.component';
+import { WorkWithComponent } from './components/products/consulting/work-with/work-with.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ConsumersInfoComponent } from './components/products/serviceplug/consum
     ManufacturersBannerComponent,
     ManufacturersInfoComponent,
     ConsumersBannerComponent,
-    ConsumersInfoComponent
+    ConsumersInfoComponent,
+    WorkWithComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
