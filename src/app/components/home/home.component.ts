@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { RouteService } from 'src/app/services/route.service';
 import { Title } from '@angular/platform-browser';
 declare var $: any;
 
