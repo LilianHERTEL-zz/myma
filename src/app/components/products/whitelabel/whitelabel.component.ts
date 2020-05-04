@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-whitelabel',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./whitelabel.component.scss']
 })
 export class WhitelabelComponent implements OnInit {
+  title: string = 'Myma ~ White labelling';private
 
-  constructor() { }
+  constructor(private titleService: Title) {}
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.title);
   }
-
 }

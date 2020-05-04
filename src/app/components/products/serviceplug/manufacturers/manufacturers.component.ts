@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-manufacturers',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manufacturers.component.scss'],
 })
 export class ManufacturersComponent implements OnInit {
-  constructor() {}
+  title: string = 'Myma ~ Serviceplug for manufacturers';
 
-  ngOnInit(): void {}
+  constructor(private titleService: Title) {}
+
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+  }
 }

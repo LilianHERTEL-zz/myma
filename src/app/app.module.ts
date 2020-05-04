@@ -73,7 +73,7 @@ import { WorkWithComponent } from './components/products/consulting/work-with/wo
     ManufacturersInfoComponent,
     ConsumersBannerComponent,
     ConsumersInfoComponent,
-    WorkWithComponent
+    WorkWithComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
