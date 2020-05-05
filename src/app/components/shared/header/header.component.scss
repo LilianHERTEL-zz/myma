@@ -2,10 +2,7 @@
   padding: unset;
   line-height: 4rem;
 }
-/*
-.navbar-logo {
-    margin-left: 2rem;
-}*/
+
 .navbar-toggler {
   margin-right: 1.5rem;
   border-radius: 0.5rem;
@@ -32,16 +29,13 @@
   .serviceplug-menu-large {
     display: none;
   }
-  /*/
-  #navbarNav {
-    height: 300px !important;
-  }*/
 }
 
 @media (max-width: 991.9px) {
   .second-dropdown div {
     position: relative;
   }
+
   .second-dropdown div::after {
     content: "";
     position: absolute;

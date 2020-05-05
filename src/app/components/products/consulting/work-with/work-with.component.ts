@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkWithComponent implements OnInit {
   images = [
-    'assets/images/Chargifi_logo.png',
-    'assets/images/ImperialCollege_logo.png',
-    'assets/images/NorthernPower_logo.png',
-    'assets/images/P&G_logo.png',
-    'assets/images/TrinityCollege_logo.png',
-    'assets/images/WesternPower_logo.png',
-    'assets/images/Zola_logo.png',
+    'assets/images/companies/Chargifi_logo.png',
+    'assets/images/companies/ImperialCollege_logo.png',
+    'assets/images/companies/NorthernPower_logo.png',
+    'assets/images/companies/P&G_logo.png',
+    'assets/images/companies/TrinityCollege_logo.png',
+    'assets/images/companies/WesternPower_logo.png',
+    'assets/images/companies/Zola_logo.png',
   ];
 
   constructor() {}

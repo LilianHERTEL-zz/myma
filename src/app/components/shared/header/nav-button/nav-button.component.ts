@@ -2,7 +2,6 @@ import {
   Component,
   Input,
   AfterViewInit,
-  OnInit,
   OnChanges,
 } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
