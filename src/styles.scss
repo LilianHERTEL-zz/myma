@@ -28,10 +28,16 @@ body {
   .height-vp-full {
     height: calc(100vh - 80px) !important;
   }
+  .min-height-vp-full {
+    min-height: calc(100vh - 80px) !important;
+  }
 }
 @media (max-width: 991.9px) {
   .height-vp-full {
     height: calc(100vh - 74px) !important;
+  }
+  .min-height-vp-full {
+    min-height: calc(100vh - 74px) !important;
   }
 }
 

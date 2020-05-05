@@ -1,42 +1,48 @@
-<div class="container-fluid p-0 height-vp-full spacing-0">
-  <div class="row m-0 height-vp-full contact-banner-row">
-    <div class="col-lg-7 p-0 contact-banner-left">
-      <form (ngSubmit)="processForm()">
+<div class="container-fluid p-0 min-height-vp-full spacing-0">
+  <div class="row m-0 min-height-vp-full contact-banner-row">
+    <div class="col-lg-7 d-flex flex-column justify-content-center padding-2 padding-right-8 contact-banner-left">
+      <form class="contact-form" (ngSubmit)="processForm()">
         <!-- name -->
-        <div class="">
+        <div class="form-group">
+          <label for="contactNameInput">Name</label>
           <input
+            id="contactNameInput"
             type="text"
             name="name"
-            class=""
+            class="form-control"
             placeholder="Your Name"
             [(ngModel)]="name"
           />
         </div>
         <!-- email -->
-        <div class="">
+        <div class="form-group">
+          <label for="contactEmailInput">Email address</label>
           <input
+            id="contactEmailInput"
             type="email"
             name="email"
-            class=""
+            class="form-control"
             placeholder="Your Email"
             [(ngModel)]="email"
           />
         </div>
         <!-- message -->
-        <div class="field">
+        <div class="form-group">
+          <label for="contactEmailInput">Message</label>
           <textarea
-            class=""
+            id="contactMessageInput"
+            class="form-control contact-textarea"
             name="message"
             placeholder="What's on your mind?"
             [(ngModel)]="message"
           ></textarea>
         </div>
-        <button type="submit" class="">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
 
     <div
-      class="col-lg-5 padding-right-5 height-100 d-flex flex-column contact-banner-right text-center background-color-primary"
+      class="col-lg-5 padding-right-5 d-flex flex-column contact-banner-right text-center background-color-primary"
     >
       <div class="text-color-light">
         <h1 class="font-weight-bold padding-bottom-1">

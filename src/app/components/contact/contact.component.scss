@@ -1,3 +1,11 @@
+.contact-form {
+  z-index: 10 !important;
+}
+
+.contact-textarea {
+  min-height: 200px !important;
+}
+
 .network-image {
   height: 48px;
   border: 0.15rem solid var(--bg-light);
@@ -15,7 +23,7 @@
 
 @media (max-width: 991.9px) {
   .contact-banner-row {
-      flex-direction: column !important;
+    flex-direction: column !important;
   }
 
   .contact-banner-right {
