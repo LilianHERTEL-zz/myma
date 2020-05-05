@@ -1,6 +1,40 @@
 <div class="container-fluid p-0 height-vp-full spacing-0">
   <div class="row m-0 height-vp-full contact-banner-row">
-    <div class="col-lg-7 p-0 contact-banner-left"></div>
+    <div class="col-lg-7 p-0 contact-banner-left">
+      <form (ngSubmit)="processForm()">
+        <!-- name -->
+        <div class="">
+          <input
+            type="text"
+            name="name"
+            class=""
+            placeholder="Your Name"
+            [(ngModel)]="name"
+          />
+        </div>
+        <!-- email -->
+        <div class="">
+          <input
+            type="email"
+            name="email"
+            class=""
+            placeholder="Your Email"
+            [(ngModel)]="email"
+          />
+        </div>
+        <!-- message -->
+        <div class="field">
+          <textarea
+            class=""
+            name="message"
+            placeholder="What's on your mind?"
+            [(ngModel)]="message"
+          ></textarea>
+        </div>
+        <button type="submit" class="">Submit</button>
+      </form>
+    </div>
+
     <div
       class="col-lg-5 padding-right-5 height-100 d-flex flex-column contact-banner-right text-center background-color-primary"
     >
