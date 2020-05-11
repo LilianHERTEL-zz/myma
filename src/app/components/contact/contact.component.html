@@ -1,14 +1,31 @@
 <div class="container-fluid p-0 min-height-vp-full spacing-0">
   <div class="row m-0 min-height-vp-full contact-banner-row">
-    <div class="col-lg-7 d-flex flex-column justify-content-center padding-2 padding-right-8 contact-banner-left">
+    <div
+      class="col-lg-7 d-flex flex-column justify-content-center padding-2 padding-right-8 contact-banner-left"
+    >
+      <div class="text-color-primary">
+        <h1 class="font-weight-bold padding-bottom-1">
+          Let's Talk!
+        </h1>
+        <p class="padding-bottom-1">
+          We aim to respond to all queries within two working days - to contact
+          us immediately consider calling.
+        </p>
+      </div>
       <form class="contact-form" (ngSubmit)="processForm()">
         <!-- name -->
         <div class="form-group">
-          <label for="contactNameInput">Name</label>
+          <label
+            class="text-color-primary font-weight-bold"
+            for="contactNameInput"
+            >Name</label
+          >
           <input
             id="contactNameInput"
             type="text"
             name="name"
+            required
+            minlength="30"
             class="form-control"
             placeholder="Your Name"
             [(ngModel)]="name"
@@ -16,11 +33,16 @@
         </div>
         <!-- email -->
         <div class="form-group">
-          <label for="contactEmailInput">Email address</label>
+          <label
+            class="text-color-primary font-weight-bold"
+            for="contactEmailInput"
+            >Email address</label
+          >
           <input
             id="contactEmailInput"
             type="email"
             name="email"
+            required
             class="form-control"
             placeholder="Your Email"
             [(ngModel)]="email"
@@ -28,16 +50,23 @@
         </div>
         <!-- message -->
         <div class="form-group">
-          <label for="contactEmailInput">Message</label>
+          <label
+            class="text-color-primary font-weight-bold"
+            for="contactEmailInput"
+            >Message</label
+          >
           <textarea
             id="contactMessageInput"
             class="form-control contact-textarea"
             name="message"
+            required
             placeholder="What's on your mind?"
             [(ngModel)]="message"
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary font-weight-bold">
+          Submit
+        </button>
       </form>
     </div>
 
