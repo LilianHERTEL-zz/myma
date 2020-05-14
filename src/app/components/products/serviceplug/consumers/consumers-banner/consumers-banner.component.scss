@@ -8,10 +8,11 @@
 
 @media (max-width: 991.9px) {
   .consumers-banner-right {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
     padding-bottom: 5rem !important;
     padding-top: 5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    height: auto !important;
   }
 
   .text {
@@ -21,30 +22,6 @@
 
   .meet-button {
     margin-top: 1.5rem;
-  }
-}
-
-@media (max-width: 575.9px) {
-  #consumers-banner-img-1,
-  #consumers-banner-img-2 {
-    display: none;
-  }
-
-  #consumers-banner-img-3 {
-    max-width: none !important;
-    flex: auto !important;
-  }
-
-  .image-col {
-    text-align: center;
-  }
-}
-
-@media (max-width: 991.9px) {
-  .consumers-banner-right {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-    height: auto !important;
   }
 
   .banner-row {
@@ -60,11 +37,30 @@
     border: none !important;
   }
 
+  /*
   .consumers-banner-image {
     height: 100%;
     object-position: bottom !important;
+  }*/
+}
+
+@media (max-width: 575.9px) {
+  #consumers-banner-img-1,
+  #consumers-banner-img-2 {
+    display: none;
+  }
+
+  #consumers-banner-img-3 {
+    max-width: none !important;
+    flex: auto !important;
+    padding: 0 !important;
+  }
+
+  .image-col {
+    text-align: center;
   }
 }
+
 @media (min-width: 576px) and (max-width: 991.9px) {
   .image-col {
     max-height: 50% !important;

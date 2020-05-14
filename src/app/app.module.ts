@@ -39,6 +39,9 @@ import { ConsumersBannerComponent } from './components/products/serviceplug/cons
 import { ConsumersInfoComponent } from './components/products/serviceplug/consumers/consumers-info/consumers-info.component';
 import { WorkWithComponent } from './components/products/consulting/work-with/work-with.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
+import { ContactDetailsComponent } from './components/contact/contact-details/contact-details.component';
+import { HomeWorkedWithComponent } from './components/home/home-worked-with/home-worked-with.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,9 @@ import { HttpClientModule } from '@angular/common/http';
     ConsumersBannerComponent,
     ConsumersInfoComponent,
     WorkWithComponent,
+    ContactFormComponent,
+    ContactDetailsComponent,
+    HomeWorkedWithComponent,
   ],
   imports: [
     BrowserModule,
