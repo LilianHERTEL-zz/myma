@@ -50,6 +50,22 @@ body {
     font-size: xx-large !important;
   }
 }
+.dropdown-menu {
+  color: inherit !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+  color: inherit !important;
+  background-color: #f8f9fa !important;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+  color: #6c757d !important;
+}
+
+.form-control {
+  border: 1px solid #ced4da !important;
+  color: #212529 !important;
+}
 
 .form-control:focus {
   border-color: var(--bg-primary-light) !important;
@@ -60,25 +76,29 @@ body {
   border-radius: 0.5rem !important;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
-.btn-primary {
+.btn-primary, .btn-primary:disabled:hover {
   background-color: var(--bg-primary) !important;
   border-color: var(--bg-primary) !important;
 }
-.btn-secondary {
+.btn-secondary, .btn-secondary:disabled:hover {
   background-color: var(--bg-secondary) !important;
   border-color: var(--bg-secondary) !important;
 }
-.btn-light {
+.btn-light, .btn-light:disabled:hover {
   background-color: var(--bg-light) !important;
   border-color: var(--bg-light) !important;
   color: var(--bg-primary) !important;
 }
 
-.btn:not(.tab-button):hover {
+.btn:hover {
   background-color: var(--bg-secondary) !important;
   border-color: var(--bg-secondary) !important;
 }
-.btn-secondary:not(.tab-button):hover {
+.btn-primary:hover {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--bg-secondary) !important;
+}
+.btn-secondary:hover {
   background-color: var(--bg-primary-light) !important;
   border-color: var(--bg-primary-light) !important;
 }

@@ -12,62 +12,131 @@
           us immediately consider calling.
         </p>
       </div>
-      <form class="contact-form" (ngSubmit)="processForm()">
-        <!-- name -->
+      <!-- Contact form -->
+      <form
+        class="contact-form"
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <!-- Name -->
         <div class="form-group">
           <label
             class="text-color-primary font-weight-bold"
             for="contactNameInput"
-            >Name</label
           >
+            Name
+          </label>
           <input
             id="contactNameInput"
+            formControlName="contactFormName"
             type="text"
-            name="name"
             required
-            minlength="30"
             class="form-control"
-            placeholder="Your Name"
-            [(ngModel)]="name"
+            [ngClass]="{ 'is-invalid': submitted && f.contactFormName.errors }"
           />
+          <div
+            *ngIf="submitted && f.contactFormName.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.contactFormName.errors.required">
+              Name is required
+            </div>
+          </div>
         </div>
-        <!-- email -->
+
+        <!-- Email -->
         <div class="form-group">
           <label
             class="text-color-primary font-weight-bold"
             for="contactEmailInput"
-            >Email address</label
           >
+            Email address
+          </label>
           <input
             id="contactEmailInput"
             type="email"
-            name="email"
+            formControlName="contactFormEmail"
             required
             class="form-control"
-            placeholder="Your Email"
-            [(ngModel)]="email"
+            [ngClass]="{ 'is-invalid': submitted && f.contactFormEmail.errors }"
           />
+          <div
+            *ngIf="submitted && f.contactFormEmail.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.contactFormEmail.errors.required">
+              Email is required
+            </div>
+            <div *ngIf="f.contactFormEmail.errors.email">
+              Email is not valid
+            </div>
+          </div>
         </div>
-        <!-- message -->
+
+        <!-- Subject -->
         <div class="form-group">
           <label
             class="text-color-primary font-weight-bold"
-            for="contactEmailInput"
-            >Message</label
+            for="contactSubjectInput"
           >
+            Subject
+          </label>
+          <div class="select-wrapper">
+            <select
+              formControlName="contactFormSubjects"
+              class="form-control"
+              id="contactSubjectInput"
+              required
+              [ngClass]="{
+                'is-invalid': submitted && f.contactFormSubjects.errors
+              }"
+            >
+              <option>Consumer request</option>
+              <option>Manufacturer request</option>
+            </select>
+            <div
+              *ngIf="submitted && f.contactFormSubjects.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f.contactFormSubjects.errors.required">
+                Subject is required
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label
+            class="text-color-primary font-weight-bold"
+            for="contactMessageInput"
+          >
+            Message
+          </label>
           <textarea
+            formControlName="contactFormMessage"
             id="contactMessageInput"
             class="form-control contact-textarea"
-            name="message"
             required
-            placeholder="What's on your mind?"
-            [(ngModel)]="message"
+            [ngClass]="{
+              'is-invalid': submitted && f.contactFormMessage.errors
+            }"
           ></textarea>
+          <div
+              *ngIf="submitted && f.contactFormMessage.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f.contactFormMessage.errors.required">
+                Message is required
+              </div>
+            </div>
         </div>
+
+        <!-- Send button -->
         <button type="submit" class="btn btn-primary font-weight-bold">
           Submit
         </button>
       </form>
+      <!-- Default form contact -->
     </div>
 
     <div
