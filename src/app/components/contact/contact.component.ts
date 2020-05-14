@@ -11,6 +11,10 @@ import { ConnectionService } from 'src/app/services/connection.service';
 export class ContactComponent {
   title: string = 'Myma ~ Contact';
 
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+  }
+
   submitted = false;
 
   contactForm: FormGroup;
@@ -31,6 +35,7 @@ export class ContactComponent {
   }
 
   constructor(
+    private titleService: Title,
     private fb: FormBuilder,
     private connectionService: ConnectionService
   ) {
@@ -55,11 +60,14 @@ export class ContactComponent {
 
     this.connectionService.sendMessage(this.contactForm.value).subscribe(
       () => {
-        alert('Your message has been sent.');
+        alert('We have successfully received your message.');
         this.contactForm.reset();
         this.disabledSubmitButton = true;
       },
       (error) => {
+        alert(
+          'Sorry, an error occured. There might be a problem with your email address.'
+        );
         console.log('Error', error);
       }
     );

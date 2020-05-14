@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./whitelabel.component.scss']
 })
 export class WhitelabelComponent implements OnInit {
-  title: string = 'Myma ~ White labelling';private
+  title: string = 'Myma ~ White labelling';
 
   constructor(private titleService: Title) {}
 
