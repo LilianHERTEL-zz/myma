@@ -1,9 +1,13 @@
+/*********************************************************************************************
+ * Backend API, responsible for sending emails
+ *********************************************************************************************/
 const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
 
+// Creates the nodemailer transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   provider: "gmail",
@@ -30,14 +34,16 @@ app.use(function (req, res, next) {
 });
 
 app.post("/send", function (req, res) {
+  // Retrieves all the data from the form fields
   let senderName = req.body.contactFormName;
   let senderEmail = req.body.contactFormEmail;
   let messageSubject = req.body.contactFormSubjects;
   let messageText = req.body.contactFormMessage;
 
+  // Formats the message so that it is displayed properly as an email
   let formattedMessage = `- ${messageSubject} -\n\nFrom: ${senderName}\nEmail: ${senderEmail}\n\n- Request message - \n\n\t${messageText}`;
 
-
+  // The email object
   let mailOptions = {
     to: "lilianhertelwifiplug@gmail.com", // Email address on which you want to send emails from your customers
     from: senderName,
@@ -46,7 +52,7 @@ app.post("/send", function (req, res) {
     replyTo: senderEmail,
   };
 
-  // Checks all the fields
+  // Checks the data from the form fields
   if (
     senderName === "" ||
     senderEmail === "" ||
@@ -60,6 +66,7 @@ app.post("/send", function (req, res) {
     return;
   }
 
+  // Attempts to send the email
   transporter.sendMail(mailOptions, function (error, response) {
     if (error) {
       console.log(error);
@@ -71,6 +78,7 @@ app.post("/send", function (req, res) {
   });
 });
 
+// Starts the server on the given port
 app.listen(port, function () {
   console.log("Express started on port: ", port);
 });
