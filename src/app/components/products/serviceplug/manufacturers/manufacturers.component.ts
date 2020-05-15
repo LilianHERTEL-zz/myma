@@ -6,6 +6,10 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './manufacturers.component.html',
   styleUrls: ['./manufacturers.component.scss'],
 })
+
+/**
+ * Serviceplug for manufacturers page component
+ */
 export class ManufacturersComponent implements OnInit {
   // Browser title
   title: string = 'Myma ~ Serviceplug for manufacturers';
