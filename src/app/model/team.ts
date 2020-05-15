@@ -1,6 +1,10 @@
 import { Member } from './member';
 
+/**
+ * Team class, contains team members
+ */
 export class Team {
+  // The array of team members
   team: Array<Member> = [
     new Member('Leon', 'CEO', 'assets/images/team/leon.png'),
     new Member('Alan', 'CTO', 'assets/images/team/alan.png'),

@@ -6,6 +6,9 @@ import {
   animate,
 } from '@angular/animations';
 
+/**
+ * The animation triggered as a transition between 2 routes
+ */
 export const fadeAnimation = trigger('routeAnimations', [
   transition('* <=> *', [
     query(':enter, :leave', [

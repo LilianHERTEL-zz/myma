@@ -1,25 +1,24 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 ul {
   padding: 0 !important;
   margin: 0 !important;
   list-style: none !important;
   text-align: center !important;
 }
-
 .card {
   background: transparent !important;
   text-align: center;
   border: none !important;
 }
-
 .offer-icon {
   height: 3.5rem;
   width: auto;
 }
-
 .card-title {
   color: var(--bg-secondary);
 }
-
 .card-body {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -27,6 +26,9 @@ ul {
   padding-right: 1rem !important;
 }
 
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
 @media (max-width: 992px) {
   .tab-container {
     max-width: none !important;

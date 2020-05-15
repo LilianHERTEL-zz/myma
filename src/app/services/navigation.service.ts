@@ -6,25 +6,33 @@ import { NavButtonComponent } from '../components/shared/header/nav-button/nav-b
 @Injectable({
   providedIn: 'root',
 })
+
+/**
+ * This service manages the NavButtons and NavDropdowns in the header
+ */
 export class NavigationService {
+  // List of all the header elements to be managed
   private navItems: Array<
     NavButtonComponent | NavDropdownComponent
   > = new Array();
 
+  // List of the elements in the serviceplug dropdown menu
   private _serviceplugItems: Array<NavButtonComponent> = new Array();
 
+  /**
+   * Adds an item to the Serviceplug dropdown menu
+   * @param item A given NavButton that should be added to the Serviceplug dropdown menu
+   */
   public addServiceplugItem(item: NavButtonComponent) {
     this._serviceplugItems.push(item);
   }
 
+  /**
+   * Adds an item to the nav items list
+   * @param item A given item that should be added to the nav items list
+   */
   public addItem(item: NavButtonComponent | NavDropdownComponent) {
     this.navItems.push(item);
-  }
-
-  private desactivateLinks() {
-    this.navItems.forEach((l) => {
-      l.desactivate();
-    });
   }
 
   /**
@@ -37,17 +45,30 @@ export class NavigationService {
     return str;
   }
 
+  /**
+   * Desactivates all the items in the header navbar
+   */
+  private desactivateLinks() {
+    this.navItems.forEach((l) => {
+      l.desactivate();
+    });
+  }
+
+  /**
+   * Activates the item corresponding to the given route
+   * @param route A given route string
+   */
   private activateLink(route: string) {
     let currentRoute: string = this.removeFirstSlash(route);
 
-    // desactivates all the links
+    // Desactivates all the links
     this.desactivateLinks();
 
     // Looks for the the clicked link to activate it
     this.navItems.forEach((item) => {
       let linkRoute = this.removeFirstSlash(item.route);
       if (linkRoute === currentRoute) {
-        item.activate(); // activates the clicked link
+        item.activate(); // Activates the clicked link
 
         // Checks if the item is a serviceplug submenu
         const regex = new RegExp(/serviceplug\/[A-Z]*/);
@@ -59,6 +80,15 @@ export class NavigationService {
     });
   }
 
+  /**
+   * NavigationService constructor
+   * **
+   * Subscribes to the router events
+   * **
+   * Activates the correct link on NavigationEnd
+   * **
+   * @param router Injects the Router service in the component
+   */
   constructor(private router: Router) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

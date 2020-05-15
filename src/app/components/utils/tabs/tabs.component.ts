@@ -11,27 +11,36 @@ import { TabComponent } from './tab/tab.component';
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
 })
+
+/**
+ * Tabs component that displays tabs, and allows the user to switch between tabs
+ */
 export class TabsComponent implements AfterContentInit {
+  // List of all the TabComponents children
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
 
+  constructor() {}
+
+  /**
+   * Selects the given tab, so that the corresponding text is displayed
+   * @param tab A given tab, that should be selected
+   */
   selectTab(tab: TabComponent) {
-    // desactivates all the tabs
+    // Desactivates all the tabs
     this.tabs.toArray().forEach((tab) => (tab.active = false));
 
-    // activates the clicked tab
+    // Activates the clicked tab
     tab.active = true;
   }
-
-  constructor() {}
 
   /**
    * Called after the component children have been created
    */
   ngAfterContentInit(): void {
-    // retrieves all active tabs
+    // Retrieves all active tabs
     let activeTabs = this.tabs.filter((tab) => tab.active);
 
-    // no tab is active, activates the first tab
+    // If no tab is active, activates the first tab
     if (activeTabs.length === 0) {
       this.selectTab(this.tabs.first);
     }

@@ -1,3 +1,6 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .card {
   border: none !important;
   background: none !important;
@@ -15,55 +18,99 @@
   color: var(--bg-light);
   //text-align: justify;
 }
-
-.howItWorks-container {
-  padding: 0;
-}
-
-@media (max-width: 991.9px) {
-  .howItWorks-container {
-    width: auto;
-  }
-
-  .card-body {
-    padding-left: 1rem;
-  }
-
-  .howItWorks-title {
-    flex-direction: column;
-  }
-
-  .title {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 .howItWorks-container {
   border-top: 0.1rem solid var(--bg-secondary);
   border-bottom: 0.1rem solid var(--bg-secondary);
+  padding: 0;
+  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
-
 .howItWorks-container .row .col-lg:nth-child(even) {
   background-color: var(--bg-primary-light);
 }
 .howItWorks-container .row .col-lg:nth-child(odd) {
   background-color: var(--bg-primary);
 }
-
 .howItWorks-row-breakpoint {
   overflow: hidden;
 }
 
-.howItWorks-container {
-  box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+// Arrows after each step div, for small and large displays
+.howItWorks-step:after,
+.howItWorks-step:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+// Removes the arrow for the last step
+.howItWorks-step:last-child::after,
+.howItWorks-step:last-child::before {
+  display: none;
 }
 
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
+@media (max-width: 991.9px) {
+  .howItWorks-container {
+    width: auto;
+  }
+  .card-body {
+    padding-left: 1rem;
+  }
+  .howItWorks-title {
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+  .howItWorks-step:after,
+  .howItWorks-step:before {
+    width: 50%;
+    height: 20px;
+    top: 100%;
+  }
+  .howItWorks-step:nth-of-type(odd):after {
+    left: 0;
+    background: linear-gradient(
+      to left bottom,
+      var(--bg-primary) 50%,
+      transparent 52%
+    );
+  }
+  .howItWorks-step:nth-of-type(odd):before {
+    right: 0;
+    background: linear-gradient(
+      to right bottom,
+      var(--bg-primary) 50%,
+      transparent 52%
+    );
+  }
+  .howItWorks-step:nth-of-type(even):after {
+    left: 0;
+    background: linear-gradient(
+      to left bottom,
+      var(--bg-primary-light) 50%,
+      transparent 52%
+    );
+  }
+  .howItWorks-step:nth-of-type(even):before {
+    right: 0;
+    background: linear-gradient(
+      to right bottom,
+      var(--bg-primary-light) 50%,
+      transparent 52%
+    );
+  }
+}
+
+/*********************************************************************************************
+ * Large screens styles
+ *********************************************************************************************/
 @media (min-width: 992px) {
   .app-image {
     width: 70%;
   }
-
   .howItWorks-row-breakpoint {
     display: none;
   }
@@ -75,7 +122,6 @@
     padding-right: 0;
   }
   .card-text {
-    //z-index: -1;
     height: 0;
     opacity: 0;
     transform: scale(0);
@@ -115,77 +161,12 @@
   .howItWorks-step:not(:hover) {
     justify-content: center;
   }
-}
-
-/**
- * Arrows after each step div, for small and large displays
- */
-.howItWorks-step:after,
-.howItWorks-step:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-}
-
-// Removes the arrow for the last step
-.howItWorks-step:last-child::after,
-.howItWorks-step:last-child::before {
-  display: none;
-}
-
-// Small display version
-@media (max-width: 991.9px) {
-  .howItWorks-step:after,
-  .howItWorks-step:before {
-    width: 50%;
-    height: 20px;
-    top: 100%;
-  }
-
-  .howItWorks-step:nth-of-type(odd):after {
-    left: 0;
-    background: linear-gradient(
-      to left bottom,
-      var(--bg-primary) 50%,
-      transparent 52%
-    );
-  }
-  .howItWorks-step:nth-of-type(odd):before {
-    right: 0;
-    background: linear-gradient(
-      to right bottom,
-      var(--bg-primary) 50%,
-      transparent 52%
-    );
-  }
-
-  .howItWorks-step:nth-of-type(even):after {
-    left: 0;
-    background: linear-gradient(
-      to left bottom,
-      var(--bg-primary-light) 50%,
-      transparent 52%
-    );
-  }
-  .howItWorks-step:nth-of-type(even):before {
-    right: 0;
-    background: linear-gradient(
-      to right bottom,
-      var(--bg-primary-light) 50%,
-      transparent 52%
-    );
-  }
-}
-
-// Large display version
-@media (min-width: 992px) {
   .howItWorks-step:after,
   .howItWorks-step:before {
     width: 20px;
     height: 50%;
     left: 100%;
   }
-
   .howItWorks-step:nth-of-type(odd):after {
     bottom: 0;
     background: linear-gradient(
@@ -202,7 +183,6 @@
       transparent 52%
     );
   }
-
   .howItWorks-step:nth-of-type(even):after {
     bottom: 0;
     background: linear-gradient(

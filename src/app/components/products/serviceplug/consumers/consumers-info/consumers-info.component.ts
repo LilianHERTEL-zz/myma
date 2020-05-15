@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-consumers-info',
   templateUrl: './consumers-info.component.html',
   styleUrls: ['./consumers-info.component.scss'],
 })
-export class ConsumersInfoComponent implements OnInit {
+
+/**
+ * Serviceplug for consumers information page component
+ */
+export class ConsumersInfoComponent {
+  // List of paragraphs to be displayed, each one with a title, a subtitle, and a content
   infoList = [
     {
       title: 'MANUFACTURER SERVICING',
@@ -47,6 +52,4 @@ export class ConsumersInfoComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

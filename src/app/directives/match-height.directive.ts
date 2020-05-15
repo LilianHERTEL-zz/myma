@@ -9,51 +9,65 @@ import {
 @Directive({
   selector: '[myMatchHeight]',
 })
+
+/**
+ * Directive used to make elements of a class the same height as the tallest element in this div
+ */
 export class MatchHeightDirective implements AfterViewChecked {
-  // class name to match height
+  // Class name to match height
   @Input() myMatchHeight: string;
 
   constructor(private el: ElementRef) {}
 
   ngAfterViewChecked() {
-    // call our matchHeight function here
+    // Calls the matchHeight function to set the height of each element properly
     this.matchHeight(this.el.nativeElement, this.myMatchHeight);
   }
 
+  /**
+   * Updates the height of each element of the given class name, so that they have the height of the tallest element
+   * @param parent The element in which are contained the elements we want to update the height
+   * @param className Class name to match height
+   */
   matchHeight(parent: HTMLElement, className: string) {
-    // match height logic here
-
     if (!parent) return;
 
-    // step 1: find all the child elements with the selected class name
+    // Finds all the child elements with the selected class name
     const children = parent.getElementsByClassName(className);
 
     if (!children) return;
 
-    // step 1b: reset all children height
+    // Resets the height of each child
     Array.from(children).forEach((x: HTMLElement) => {
       x.style.height = 'initial';
     });
 
-    // step 2a: get all the child elements heights
+    // Gets all the child elements heights
     const itemHeights = Array.from(children).map(
       (x) => x.getBoundingClientRect().height
     );
 
-    // step 2b: find out the tallest
+    // Finds out the tallest element
     const maxHeight = itemHeights.reduce((prev, curr) => {
       return curr > prev ? curr : prev;
     }, 0);
 
-    // step 3: update all the child elements to the tallest height
+    // Updates all the child elements to the tallest height
     Array.from(children).forEach(
       (x: HTMLElement) => (x.style.height = `${maxHeight}px`)
     );
   }
 
+  /**
+   * Handles resizing the window
+   * **
+   * When the window is resized, the height of the tallest element might change
+   * **
+   * Updates the height of the elements when the window is resized
+   */
   @HostListener('window:resize')
   onResize() {
-    // call our matchHeight function here
+    // Calls the matchHeight function to set the height of each element properly
     this.matchHeight(this.el.nativeElement, this.myMatchHeight);
   }
 }

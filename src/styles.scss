@@ -1,123 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+/*********************************************************************************************
+ * Defines global styles
+ *********************************************************************************************/
 @import "assets/css/shared/fonts.scss";
 @import "assets/css/shared/colors.scss";
 @import "assets/css/shared/paddings.scss";
 @import "assets/css/shared/margins.scss";
 @import "assets/css/shared/scrollbars.scss";
+@import "assets/css/shared/buttons.scss";
+@import "assets/css/shared/sizing.scss";
 
+/*********************************************************************************************
+ * Global styles
+ *********************************************************************************************/
+body {
+  overflow-x: hidden !important;
+  background-color: var(--bg-light) !important;
+}
+.z-index-1 {
+  z-index: 1;
+}
 a,
 a:active,
 a:focus {
   outline: none !important;
 }
-
-body {
-  overflow-x: hidden !important;
-  background-color: var(--bg-light) !important;
-}
-
-.height-100 {
-  height: 100% !important;
-}
-
-.width-100 {
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  .height-vp-full {
-    height: calc(100vh - 80px) !important;
-  }
-  .min-height-vp-full {
-    min-height: calc(100vh - 80px) !important;
-  }
-}
-@media (max-width: 991.9px) {
-  .height-vp-full {
-    height: calc(100vh - 74px) !important;
-  }
-  .min-height-vp-full {
-    min-height: calc(100vh - 74px) !important;
-  }
-}
-
-.width-vp-full {
-  width: 100vw !important;
-}
-
 @media (max-width: 991.9px) {
   h1 {
     font-size: xx-large !important;
   }
 }
+
+/*********************************************************************************************
+ * Dropdown menus styles
+ *********************************************************************************************/
 .dropdown-menu {
   color: inherit !important;
 }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   color: inherit !important;
   background-color: #f8f9fa !important;
 }
 
-.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+/*
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
   color: #6c757d !important;
-}
+}*/
 
+/*********************************************************************************************
+ * Forms styles
+ *********************************************************************************************/
 .form-control {
   border: 1px solid #ced4da !important;
   color: #212529 !important;
 }
-
 .form-control:focus {
   border-color: var(--bg-primary-light) !important;
 }
 
-.btn,
-.form-control {
-  border-radius: 0.5rem !important;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-}
-.btn-primary, .btn-primary:disabled:hover {
-  background-color: var(--bg-primary) !important;
-  border-color: var(--bg-primary) !important;
-}
-.btn-secondary, .btn-secondary:disabled:hover {
-  background-color: var(--bg-secondary) !important;
-  border-color: var(--bg-secondary) !important;
-}
-.btn-light, .btn-light:disabled:hover {
-  background-color: var(--bg-light) !important;
-  border-color: var(--bg-light) !important;
-  color: var(--bg-primary) !important;
-}
-
-.btn:hover {
-  background-color: var(--bg-secondary) !important;
-  border-color: var(--bg-secondary) !important;
-}
-.btn-primary:hover {
-  background-color: var(--bg-secondary) !important;
-  border-color: var(--bg-secondary) !important;
-}
-.btn-secondary:hover {
-  background-color: var(--bg-primary-light) !important;
-  border-color: var(--bg-primary-light) !important;
-}
-
+/*********************************************************************************************
+ * Borders styles
+ *********************************************************************************************/
 .border-top-secondary {
   border-top: 0.15rem solid var(--bg-secondary);
 }
 .border-bottom-secondary {
   border-bottom: 0.15rem solid var(--bg-secondary);
 }
-
 .border-bottom-light {
   border-bottom: 0.15rem solid var(--bg-light);
 }
-
-.z-index-1 {
-  z-index: 1;
-}
-
 .no-border * {
   border: none !important;
 }

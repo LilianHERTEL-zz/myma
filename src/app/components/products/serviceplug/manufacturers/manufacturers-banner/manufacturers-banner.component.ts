@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-declare var $: any;
+import { Component } from '@angular/core';
+declare var $: any; // Allows to use jQuery
 
 @Component({
   selector: 'app-manufacturers-banner',
   templateUrl: './manufacturers-banner.component.html',
-  styleUrls: ['./manufacturers-banner.component.scss']
+  styleUrls: ['./manufacturers-banner.component.scss'],
 })
-export class ManufacturersBannerComponent implements OnInit {
 
-  constructor() { }
+/**
+ * Manufacturrers banner component
+ */
+export class ManufacturersBannerComponent {
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  /**
+   * Handles clicking on the button that makes the page scroll to a given anchor
+   * @param id The anchor we want to scroll to
+   */
   onMoreClick(id: string) {
     // Just using jQuery to avoid anchor link to add "#..." to the URL
     $('html,body').animate({ scrollTop: $('#' + id).offset().top }, 500);

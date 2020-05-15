@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Member } from 'src/app/model/member';
 
 @Component({
@@ -6,9 +6,13 @@ import { Member } from 'src/app/model/member';
   templateUrl: './team-member.component.html',
   styleUrls: ['./team-member.component.scss'],
 })
-export class TeamMemberComponent implements OnInit {
-  @Input() member: Member;
-  constructor() {}
 
-  ngOnInit(): void {}
+/**
+ * Presents a single team member with a photos
+ */
+export class TeamMemberComponent {
+  // The member instance, given in the html template
+  @Input() member: Member;
+
+  constructor() {}
 }

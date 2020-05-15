@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-work-with',
   templateUrl: './work-with.component.html',
   styleUrls: ['./work-with.component.scss'],
 })
-export class WorkWithComponent implements OnInit {
+
+/**
+ * Presents all the companies myma has worked with
+ */
+export class WorkWithComponent {
+  // Companies logos are defined here
   images = [
     'assets/images/workedWith_companies/Chargifi_logo.png',
     'assets/images/workedWith_companies/ImperialCollege_logo.png',
@@ -17,6 +22,4 @@ export class WorkWithComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

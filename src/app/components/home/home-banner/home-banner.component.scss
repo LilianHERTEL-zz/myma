@@ -1,22 +1,9 @@
-@media (max-width: 991.9px) {
-  .banner-text {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-}
-
+/*********************************************************************************************/
+// General styles
+/*********************************************************************************************/
 .myma-title {
   line-height: 32px;
 }
-
-.banner-div {
-  /*
-  background-image: url(src/assets/images/serviceplug/shutterstock_1208917930.jpg);
-  background-size: cover;
-  background-position: center;
-  */
-}
-
 .banner-text {
   background-image: -webkit-gradient(
     linear,
@@ -30,4 +17,14 @@
     rgba(102, 46, 139, 0.3),
     transparent
   );
+}
+
+/*********************************************************************************************/
+// Mobile version styles
+/*********************************************************************************************/
+@media (max-width: 991.9px) {
+  .banner-text {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
 }

@@ -1,41 +1,28 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .navbar {
   padding: unset;
   line-height: 4rem;
 }
-
 .navbar-toggler {
   margin-right: 1.5rem;
   border-radius: 0.5rem;
 }
-
 #navbarNav {
   background-color: var(--bg-light) !important;
 }
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-  }
-
-  .serviceplug-menu-small {
-    display: none;
-  }
+.full-height {
+  height: 100vh;
 }
 
-@media (max-width: 991.9px) {
-  .navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-  }
-
-  .serviceplug-menu-large {
-    display: none;
-  }
-}
-
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
 @media (max-width: 991.9px) {
   .second-dropdown div {
     position: relative;
   }
-
   .second-dropdown div::after {
     content: "";
     position: absolute;
@@ -47,12 +34,25 @@
     background-color: var(--bg-light);
     border-radius: 9999px 9999px 9999px 9999px;
   }
-
   .second-dropdown div {
     margin-left: 2rem;
   }
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .serviceplug-menu-large {
+    display: none;
+  }
 }
 
-.full-height {
-  height: 100vh;
+/*********************************************************************************************
+ * Large screens styles
+ *********************************************************************************************/
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .serviceplug-menu-small {
+    display: none;
+  }
 }

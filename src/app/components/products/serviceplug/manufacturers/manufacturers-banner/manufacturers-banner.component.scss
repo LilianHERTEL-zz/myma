@@ -1,85 +1,19 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .manufacturers-banner-image {
   object-fit: cover;
   object-position: left;
 }
-
 .image-col {
   border-bottom: 0.15rem solid var(--bg-secondary);
 }
-
 .manufacturers-banner-right {
   justify-content: center;
 }
-
 .text {
   text-align: justify;
 }
-
-@media (max-width: 991.9px) {
-  .manufacturers-banner-right {
-    padding: 0 !important;
-    padding-right: 1rem !important;
-  }
-
-  .text {
-    text-align: center;
-    padding: 0 !important;
-  }
-
-  .discover-button {
-    margin-top: 1.5rem;
-  }
-}
-/*
-@media (max-width: 767.9px) {
-  .manufacturers-banner-right {
-    padding: 0 !important;
-  }
-}*/
-
-@media (max-width: 575.9px) {
-  .manufacturers-banner-right {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-    padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
-    height: max-content !important;
-    background: var(--bg-primary);
-  }
-
-  .banner-row {
-    height: 100vh !important;
-  }
-
-  .border-bottom-light {
-    border: none !important;
-  }
-
-  .manufacturers-banner-image {
-    height: 100% !important;
-    object-position: bottom !important;
-  }
-}
-@media (min-width: 576px) and (max-width: 991.9px) {
-  .col-sm-8 {
-    flex: 0 0 55% !important;
-    max-width: 55% !important;
-  }
-  .col-sm-4 {
-    flex: 0 0 45% !important;
-    max-width: 45% !important;
-  }
-
-  .text,
-  h1,
-  h4 {
-    margin: 0 !important;
-  }
-  .discover-button {
-    margin-top: 1rem !important;
-  }
-}
-
 .manufacturers-banner-right:after {
   content: "";
   position: absolute;
@@ -112,4 +46,60 @@
     var(--bg-secondary) 50%,
     transparent 50.3%
   );
+}
+
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
+@media (max-width: 991.9px) {
+  .manufacturers-banner-right {
+    padding: 0 !important;
+    padding-right: 1rem !important;
+  }
+  .text {
+    text-align: center;
+    padding: 0 !important;
+  }
+  .discover-button {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 575.9px) {
+  .manufacturers-banner-right {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    height: max-content !important;
+    background: var(--bg-primary);
+  }
+  .banner-row {
+    height: 100vh !important;
+  }
+  .border-bottom-light {
+    border: none !important;
+  }
+  .manufacturers-banner-image {
+    height: 100% !important;
+    object-position: bottom !important;
+  }
+}
+// Intermediate screen sizes styles
+@media (min-width: 576px) and (max-width: 991.9px) {
+  .col-sm-8 {
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
+  }
+  .col-sm-4 {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+  .text,
+  h1,
+  h4 {
+    margin: 0 !important;
+  }
+  .discover-button {
+    margin-top: 1rem !important;
+  }
 }

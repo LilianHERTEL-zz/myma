@@ -1,82 +1,19 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .company-banner-image {
   object-fit: cover;
   object-position: center;
 }
-
 .image-col {
   border-bottom: 0.15rem solid var(--bg-secondary);
 }
-
-.company-banner-right {
-  justify-content: center;
-}
-
 .text {
   text-align: justify;
 }
-
-@media (max-width: 991.9px) {
-  .company-banner-right {
-    padding: 0 !important;
-    padding-right: 1rem !important;
-  }
-
-  .text {
-    text-align: center;
-    padding: 0 !important;
-  }
-
-  .meet-button {
-    margin-top: 1.5rem;
-  }
+.company-banner-right {
+  justify-content: center;
 }
-
-@media (max-width: 767.9px) {
-  .company-banner-right {
-    padding: 0 !important;
-  }
-}
-
-@media (max-width: 575.9px) {
-  .company-banner-right {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-    padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
-    height: max-content !important;
-    background: var(--bg-primary);
-  }
-
-  .banner-row {
-    height: 100vh !important;
-  }
-
-  .border-bottom-light {
-    border: none !important;
-  }
-
-  .company-banner-image {
-    height: 100% !important;
-    object-position: bottom !important;
-  }
-}
-@media (min-width: 576px) and (max-width: 991.9px) {
-  .col-sm-7,
-  .col-sm-5 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-
-  .text,
-  h1,
-  h4 {
-    margin: 0 !important;
-  }
-  .meet-button {
-    margin-top: 1rem !important;
-  }
-}
-
 .company-banner-right:after {
   content: "";
   position: absolute;
@@ -109,4 +46,61 @@
     var(--bg-secondary) 50%,
     transparent 50.3%
   );
+}
+
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
+@media (max-width: 991.9px) {
+  .company-banner-right {
+    padding: 0 !important;
+    padding-right: 1rem !important;
+  }
+  .text {
+    text-align: center;
+    padding: 0 !important;
+  }
+  .meet-button {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 767.9px) {
+  .company-banner-right {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 575.9px) {
+  .company-banner-right {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    height: max-content !important;
+    background: var(--bg-primary);
+  }
+  .banner-row {
+    height: 100vh !important;
+  }
+  .border-bottom-light {
+    border: none !important;
+  }
+  .company-banner-image {
+    height: 100% !important;
+    object-position: bottom !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.9px) {
+  .col-sm-7,
+  .col-sm-5 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  .text,
+  h1,
+  h4 {
+    margin: 0 !important;
+  }
+  .meet-button {
+    margin-top: 1rem !important;
+  }
 }

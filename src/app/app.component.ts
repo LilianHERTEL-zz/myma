@@ -8,7 +8,15 @@ import { fadeAnimation } from './animations';
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation],
 })
+
+/**
+ * Main app component
+ */
 export class AppComponent {
+  /**
+   * Prepares the route transition animation
+   * @param outlet the given router outlet (defined in the html)
+   */
   prepareRoute(outlet: RouterOutlet) {
     return (
       outlet &&

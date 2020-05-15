@@ -1,17 +1,19 @@
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
 @media (min-width: 768px) and (max-width: 991.9px) {
   .col-md-4 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
 }
-
 @media (max-width: 575.9px) {
   .consumers-details-container {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
-
-  .card-body, .detail-col {
+  .card-body,
+  .detail-col {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }

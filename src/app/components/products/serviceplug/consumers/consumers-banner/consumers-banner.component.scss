@@ -1,11 +1,49 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .consumers-banner-image {
   object-fit: contain;
 }
-
 .text {
   text-align: justify;
 }
+.consumers-banner-right:after,
+.consumers-banner-right:before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  right: 100%;
+  bottom: 0;
+}
+.consumers-banner-right:after {
+  background: linear-gradient(
+    to left bottom,
+    var(--bg-primary) 50%,
+    transparent 50.3%
+  );
+}
+.consumers-banner-right:before {
+  background: linear-gradient(
+    to left bottom,
+    var(--bg-secondary) 50%,
+    transparent 50.3%
+  );
+  transform: translateX(-0.15rem);
+}
 
+/*********************************************************************************************
+ * Large screens styles
+ *********************************************************************************************/
+@media (min-width: 992px) {
+  .consumers-banner-right {
+    outline: solid var(--bg-secondary) 0.15rem;
+  }
+}
+
+/*********************************************************************************************
+ * Small screens styles
+ *********************************************************************************************/
 @media (max-width: 991.9px) {
   .consumers-banner-right {
     padding-bottom: 5rem !important;
@@ -14,97 +52,43 @@
     padding-right: 2rem !important;
     height: auto !important;
   }
-
   .text {
     text-align: center;
     padding: 0 !important;
   }
-
   .meet-button {
     margin-top: 1.5rem;
   }
-
   .banner-row {
     flex-direction: column-reverse !important;
     height: auto !important;
   }
-
   .banner-row .row {
     margin-top: -2.1rem !important;
   }
-
   .border-bottom-light {
     border: none !important;
   }
-
-  /*
-  .consumers-banner-image {
-    height: 100%;
-    object-position: bottom !important;
-  }*/
 }
-
 @media (max-width: 575.9px) {
   #consumers-banner-img-1,
   #consumers-banner-img-2 {
     display: none;
   }
-
   #consumers-banner-img-3 {
     max-width: none !important;
     flex: auto !important;
     padding: 0 !important;
   }
-
   .image-col {
     text-align: center;
   }
 }
-
 @media (min-width: 576px) and (max-width: 991.9px) {
   .image-col {
     max-height: 50% !important;
   }
   .consumers-banner-image {
     object-fit: cover !important;
-  }
-}
-
-.consumers-banner-right:after {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 100%;
-  right: 100%;
-}
-.consumers-banner-right:after {
-  bottom: 0;
-  background: linear-gradient(
-    to left bottom,
-    var(--bg-primary) 50%,
-    transparent 50.3%
-  );
-}
-.consumers-banner-right:before {
-  content: "";
-  position: absolute;
-  width: calc(150px);
-  height: 100%;
-  right: 100%;
-  //border-right: 0.15rem solid var(--bg-secondary);
-  transform: translateX(-0.15rem);
-}
-.consumers-banner-right:before {
-  bottom: 0;
-  background: linear-gradient(
-    to left bottom,
-    var(--bg-secondary) 50%,
-    transparent 50.3%
-  );
-}
-
-@media (min-width: 992px) {
-  .consumers-banner-right {
-    outline: solid var(--bg-secondary) 0.15rem;
   }
 }

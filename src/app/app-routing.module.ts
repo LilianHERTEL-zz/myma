@@ -10,6 +10,9 @@ import { ManufacturersComponent } from './components/products/serviceplug/manufa
 import { WhitelabelComponent } from './components/products/whitelabel/whitelabel.component';
 import { ConsultingComponent } from './components/products/consulting/consulting.component';
 
+/**
+ * All site routes and the correspondign components to display are defined here
+ */
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { animation: 'Home' } },
   {

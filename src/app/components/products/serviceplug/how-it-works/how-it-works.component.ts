@@ -1,19 +1,16 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  ViewChild,
-  ElementRef,
-  AfterViewChecked,
-  AfterContentInit,
-} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-how-it-works',
   templateUrl: './how-it-works.component.html',
   styleUrls: ['./how-it-works.component.scss'],
 })
-export class HowItWorksComponent implements AfterViewChecked {
+
+/**
+ * Presents the serviceplug with steps
+ */
+export class HowItWorksComponent {
+  // All the steps to be displayed, each one with a title, a subtitle, and a content
   steps = [
     {
       title: 'STEP 1',
@@ -42,11 +39,4 @@ export class HowItWorksComponent implements AfterViewChecked {
   ];
 
   constructor() {}
-
-  ngAfterViewChecked() {
-    /*
-    this.contentHeight = this.elementView.nativeElement.offsetHeight;
-    console.log(this.contentHeight);
-    console.log("yoyoyoyoyoyo");*/
-  }
 }

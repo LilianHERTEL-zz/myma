@@ -1,3 +1,52 @@
+/*********************************************************************************************
+ * Define the 4 products images here
+ *********************************************************************************************/
+#wifiplug-col {
+  background-image: url(src/assets/images/home/WIFIPLUG_HOME_Render_4.png);
+}
+#serviceplug-col {
+  background-image: url(src/assets/images/home/machine_background.jpg);
+}
+#whitelabel-col {
+  background-image: url(src/assets/images/home/whitelabeling_background.png);
+}
+#consulting-col {
+  background-image: url(src/assets/images/home/consulting_background.jpg);
+}
+// Fourth image must have a 15deg rotated version to be displayed properly
+#consulting-col-2 {
+  background-image: url(src/assets/images/home/consulting_background_rotated.jpg);
+}
+/*********************************************************************************************/
+
+/*********************************************************************************************/
+// General styles
+/*********************************************************************************************/
+.row-small {
+  display: none;
+}
+.product-content {
+  color: var(--bg-light);
+  text-shadow: 1px 1px 0px #000000;
+}
+.product-background {
+  background-position: center;
+  background-size: cover;
+}
+.small-display-second-row {
+  border-top: 0.1rem solid var(--bg-light);
+}
+.gradient-background {
+  background: linear-gradient(
+    150deg,
+    rgba(46, 46, 46, 0.25) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(46, 46, 46, 0.25) 100%
+  );
+}
+.product-content * {
+  font-weight: bold;
+}
 article .container-fluid .row .col-lg:nth-child(even) {
   background-color: var(--bg-primary-light);
 }
@@ -5,54 +54,38 @@ article .container-fluid .row .col-lg:nth-child(odd),
 #products-container {
   background-color: #d0d0d0 /*var(--bg-light)*/;
 }
-
 .with-border {
   border-left: 0.1rem solid var(--bg-light);
   border-right: 0.1rem solid var(--bg-light);
+}
+
+// Prevents the rotated cols. from overlapping other elements
+article .container-fluid .row {
+  overflow: hidden;
 }
 
 /*********************************************************************************************/
 // Mobile version styles
 /*********************************************************************************************/
 @media (max-width: 991.9px) {
-  .content-div {
-    padding-left: 10%;
-    padding-right: 15%;
-  }
-}
-
-@media (max-width: 575.9px) {
-  .border-col,
-  .product-content {
-    transform: rotate(-10deg);
-    height: 130% !important;
-    margin-top: -10%;
-  }
-}
-
-@media (max-width: 991.9px) {
   .first-col {
     margin-top: -10%;
     padding-top: 3rem;
   }
-
   .product-col {
     transform: rotate(10deg);
     margin-left: -15%;
     min-width: 135% !important;
   }
-
   .border-col,
   .product-content {
     transform: rotate(-10deg);
     height: 130% !important;
   }
-
   .with-border {
     border-top: 0.1rem solid var(--bg-light);
     border-bottom: 0.1rem solid var(--bg-light);
   }
-
   .padding-left-2,
   .padding-left-4,
   .padding-left-5,
@@ -60,11 +93,9 @@ article .container-fluid .row .col-lg:nth-child(odd),
     padding-left: 0 !important;
     margin-left: 0 !important;
   }
-
   .padding-top-10 {
     padding-top: 7rem !important;
   }
-
   .content-div {
     padding-left: 18%;
     padding-right: 15%;
@@ -76,10 +107,17 @@ article .container-fluid .row .col-lg:nth-child(odd),
     margin-bottom: 1rem;
   }
 }
-
 @media (min-width: 576px) and (max-width: 991.9px) {
   #fourth-col {
     margin-top: -8% !important;
+  }
+}
+@media (max-width: 575.9px) {
+  .border-col,
+  .product-content {
+    transform: rotate(-10deg);
+    height: 130% !important;
+    margin-top: -10%;
   }
 }
 
@@ -109,106 +147,30 @@ article .container-fluid .row .col-lg:nth-child(odd),
     opacity: 0;
     transform: translateY(20px) scale(0.5);
   }
-
   .product-col:hover {
     flex-grow: 2;
   }
-}
 
-@media (min-width: 992px) {
+  // Other styles for large screens
   .height-vp-full-with-header {
     height: calc(100vh - 80px - 0.3rem);
   }
-
   #products-container {
     position: absolute !important;
   }
-
   .product-content {
     transform: rotate(-10deg);
   }
-
   .product-col {
     transform: rotate(10deg) translateY(-10%);
     padding: 0 !important;
     height: 110vh;
     transition: 0.1s ease-in;
   }
-
   .border-col {
     margin-left: -50%;
     margin-right: -50%;
     padding-left: 50%;
     padding-right: 50%;
   }
-}
-
-// Prevents the rotated cols. from overlapping other elements
-article .container-fluid .row {
-  overflow: hidden;
-}
-
-/*
-// Allows to have 4 columns on large screens, and 2 columns otherwise
-@media (max-width: 575.9px), (min-width: 1200px) {
-  .row-small {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 1199.9px) {
-  .row-large {
-    display: none;
-  }
-}
-*/
-.row-small {
-  display: none;
-}
-
-.product-content {
-  color: var(--bg-light);
-  text-shadow: 1px 1px 0px #000000;
-}
-
-.product-background {
-  background-position: center;
-  background-size: cover;
-}
-
-#wifiplug-col {
-  background-image: url(src/assets/images/home/WIFIPLUG_HOME_Render_4.png);
-}
-
-#serviceplug-col {
-  background-image: url(src/assets/images/home/machine_background.jpg);
-}
-
-#whitelabel-col {
-  background-image: url(src/assets/images/home/whitelabeling_background.png);
-}
-
-#consulting-col {
-  background-image: url(src/assets/images/home/consulting_background.jpg);
-}
-
-#consulting-col-2 {
-  background-image: url(src/assets/images/home/consulting_background_rotated.jpg);
-}
-
-.small-display-second-row {
-  border-top: 0.1rem solid var(--bg-light);
-}
-
-.gradient-background {
-  background: linear-gradient(
-    150deg,
-    rgba(46, 46, 46, 0.25) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(46, 46, 46, 0.25) 100%
-  );
-}
-
-.product-content * {
-  font-weight: bold;
 }

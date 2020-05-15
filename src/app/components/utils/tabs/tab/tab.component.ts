@@ -30,8 +30,15 @@ import {
     ]),
   ],
 })
+
+/**
+ * Tab component, contained in a tabs component
+ */
 export class TabComponent {
+  // The title text of this tab
   @Input() tabTitle: string;
+
+  // Indicates whether this tab is activated or not
   active: boolean = false;
 
   constructor() {}

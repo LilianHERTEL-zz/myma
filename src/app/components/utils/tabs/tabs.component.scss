@@ -1,14 +1,15 @@
+/*********************************************************************************************
+ * General styles
+ *********************************************************************************************/
 .navbar {
   justify-content: space-evenly !important;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
-
 .inactive {
   background-color: transparent !important;
   color: var(--bg-primary) !important;
 }
-
 .inactive:hover {
   background-color: var(--bg-primary-light) !important;
   border-color: var(--bg-primary-light) !important;
