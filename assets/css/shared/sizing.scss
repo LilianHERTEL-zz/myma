@@ -1,0 +1,29 @@
+/*********************************************************************************************
+ * Defines all sizing styles
+ *********************************************************************************************/
+
+@media (min-width: 992px) {
+  .height-vp-full {
+    height: calc(100vh - 80px) !important;
+  }
+  .min-height-vp-full {
+    min-height: calc(100vh - 80px) !important;
+  }
+}
+@media (max-width: 991.9px) {
+  .height-vp-full {
+    height: calc(100vh - 74px) !important;
+  }
+  .min-height-vp-full {
+    min-height: calc(100vh - 74px) !important;
+  }
+}
+.width-vp-full {
+  width: 100vw !important;
+}
+.height-100 {
+  height: 100% !important;
+}
+.width-100 {
+  width: 100%;
+}

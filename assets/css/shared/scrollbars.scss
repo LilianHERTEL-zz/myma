@@ -1,20 +1,20 @@
+/*********************************************************************************************
+ * Defines all scrollbars styles
+ *********************************************************************************************/
 @import "assets/css/shared/colors.scss";
 
 $scrollbar-background-color: #dddddd;
 $scrollbar-color: #bbbbbb;
 
-//SCROLLBARS 
 body::-webkit-scrollbar {
-    width: 8px;
-    background-color: $scrollbar-background-color;
+  width: 8px;
+  background-color: $scrollbar-background-color;
 }
-
 body::-webkit-scrollbar-thumb {
-    background-color: var(--bg-primary);
-    border-radius: 5px;
+  background-color: var(--bg-primary);
+  border-radius: 5px;
 }
-
 html {
-    scrollbar-width: thin;
-    scrollbar-color: $scrollbar-color $scrollbar-background-color;
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-color $scrollbar-background-color;
 }

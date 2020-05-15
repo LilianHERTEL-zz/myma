@@ -1,6 +1,6 @@
-/**
- * Defines all margin classes
- */
+/*********************************************************************************************
+ * Defines all margin styles
+ *********************************************************************************************/
 
 // The spacing unit used to define all margin values
 $spacing: 1rem;
@@ -9,7 +9,7 @@ $spacing: 1rem;
   --spacing-half: 0.5rem;
 }
 
-// ALL SIDES MARGINS
+// All sides margins
 .margin-1 {
   margin: $spacing !important;
 }
@@ -26,7 +26,7 @@ $spacing: 1rem;
   margin: $spacing * 5 !important;
 }
 
-// LEFT MARGINS
+// Left margins
 .margin-left-1 {
   margin-left: $spacing !important;
 }
@@ -43,7 +43,7 @@ $spacing: 1rem;
   margin-left: $spacing * 5 !important;
 }
 
-// RIGHT MARGINS
+// Right margins
 .margin-right-1 {
   margin-right: $spacing !important;
 }
@@ -60,7 +60,7 @@ $spacing: 1rem;
   margin-right: $spacing * 5 !important;
 }
 
-// TOP MARGINS
+// Top margins
 .margin-top-1 {
   margin-top: $spacing !important;
 }
@@ -80,7 +80,7 @@ $spacing: 1rem;
   margin-top: $spacing * 6 !important;
 }
 
-// BOTTOM MARGINS
+// Bottom margins
 .margin-bottom-1 {
   margin-bottom: $spacing !important;
 }

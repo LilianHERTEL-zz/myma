@@ -1,13 +1,16 @@
-/* COLORS */
+/*********************************************************************************************
+ * Defines all colors used in the app
+ *********************************************************************************************/
+
+// Color variables
 :root {
   --bg-primary: #652780;
   --bg-primary-light: #793b94;
   --bg-secondary: #e62577;
-
-  //--bg-light: #fafafa;
   --bg-light: white;
 }
 
+// Text color classes
 .text-color-primary {
   color: var(--bg-primary) !important;
 }
@@ -21,6 +24,7 @@
   color: var(--bg-light) !important;
 }
 
+// Background color classes
 .background-color-primary {
   background-color: var(--bg-primary) !important;
 }
