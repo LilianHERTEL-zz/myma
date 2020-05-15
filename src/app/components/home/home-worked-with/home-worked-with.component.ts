@@ -12,14 +12,14 @@ import { Component } from '@angular/core';
 export class HomeWorkedWithComponent {
   // Define all the logos here
   images = [
-    '/assets/images/home/workedWith_companies/electrolux.png',
-    '/assets/images/home/workedWith_companies/bosch.png',
-    '/assets/images/home/workedWith_companies/zanussi.png',
-    '/assets/images/home/workedWith_companies/aeg.png',
-    '/assets/images/home/workedWith_companies/neff.png',
-    '/assets/images/home/workedWith_companies/gaggenau.png',
-    '/assets/images/home/workedWith_companies/thermador.png',
-    '/assets/images/home/workedWith_companies/siemens.png',
+    'assets/images/home/workedWith_companies/electrolux.png',
+    'assets/images/home/workedWith_companies/bosch.png',
+    'assets/images/home/workedWith_companies/zanussi.png',
+    'assets/images/home/workedWith_companies/aeg.png',
+    'assets/images/home/workedWith_companies/neff.png',
+    'assets/images/home/workedWith_companies/gaggenau.png',
+    'assets/images/home/workedWith_companies/thermador.png',
+    'assets/images/home/workedWith_companies/siemens.png',
   ];
 
   constructor() {}
