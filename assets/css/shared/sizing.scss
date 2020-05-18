@@ -3,20 +3,23 @@
  *********************************************************************************************/
 
 @media (min-width: 992px) {
-  .height-vp-full {
-    height: calc(100vh - 80px) !important;
+  .height-content-full {
+    height: calc(100vh - 80px - 0.4rem) !important;
   }
-  .min-height-vp-full {
-    min-height: calc(100vh - 80px) !important;
+  .min-height-content-full {
+    min-height: calc(100vh - 80px - 0.4rem) !important;
   }
 }
 @media (max-width: 991.9px) {
-  .height-vp-full {
-    height: calc(100vh - 74px) !important;
+  .height-content-full {
+    height: calc(100vh - 74px - 0.4rem) !important;
   }
-  .min-height-vp-full {
-    min-height: calc(100vh - 74px) !important;
+  .min-height-content-full {
+    min-height: calc(100vh - 74px - 0.4rem) !important;
   }
+}
+.height-vp-full {
+  height: 100vh !important;
 }
 .width-vp-full {
   width: 100vw !important;
