@@ -1,6 +1,10 @@
 /*********************************************************************************************
  * General styles
  *********************************************************************************************/
+.btn-primary:hover {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--bg-primary) !important;
+}
 .navbar {
   justify-content: space-evenly !important;
   padding-right: 0.75rem;
@@ -15,3 +19,4 @@
   border-color: var(--bg-primary-light) !important;
   color: var(--bg-light) !important;
 }
+
