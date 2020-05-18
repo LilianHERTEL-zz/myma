@@ -17,6 +17,11 @@ a {
 .email-button {
   border-radius: 0 0.5rem 0.5rem 0 !important;
 }
+@media (min-width: 576px) {
+  .flex-grow-1 {
+    max-width: 50% !important;
+  }
+}
 
 /*********************************************************************************************
  * Small screens styles
@@ -29,10 +34,19 @@ a {
   .footer-col {
     padding: 0 !important;
   }
+  .border-right,
+  .border-left {
+    border: none !important;
+  }
 }
 @media (max-width: 767.9px) {
   .second-col {
     flex-direction: column-reverse;
     padding: 0;
+  }
+}
+@media (max-width: 575.9px) {
+  .flex-col {
+    flex-direction: column !important;
   }
 }
