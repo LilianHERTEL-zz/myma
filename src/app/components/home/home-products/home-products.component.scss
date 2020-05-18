@@ -18,6 +18,10 @@
 /*********************************************************************************************
  * General styles
  *********************************************************************************************/
+h3,
+.product-presentation * {
+  font-weight: bold;
+}
 .row-small {
   display: none;
 }
@@ -117,6 +121,9 @@ article .container-fluid .row {
   }
   .first-content-div {
     padding-left: 6rem !important;
+  }
+  .last-content-div {
+    padding-right: 6rem !important;
   }
   .products-row {
     margin-left: -6% !important;
