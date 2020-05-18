@@ -8,6 +8,11 @@
 .image-col {
   border-bottom: 0.15rem solid var(--bg-secondary);
 }
+@media (min-width: 992px) {
+  .image-col {
+    border-right: 0.16rem solid var(--bg-secondary);
+  }
+}
 .text {
   text-align: justify;
 }
@@ -33,11 +38,12 @@
 .company-banner-right:before {
   content: "";
   position: absolute;
-  width: calc(150px + 0.15rem);
+  width: calc(150px);
   height: 100%;
   right: 100%;
   z-index: 1;
-  border-right: 0.15rem solid var(--bg-secondary);
+  /* border-right: 0.15rem solid var(--bg-secondary); */
+  transform: translateX(-0.15rem);
 }
 .company-banner-right:before {
   bottom: 0;
