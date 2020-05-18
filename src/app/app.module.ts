@@ -21,7 +21,6 @@ import { HomeBannerComponent } from './components/home/home-banner/home-banner.c
 import { TeamComponent } from './components/company/team/team.component';
 import { TeamMemberComponent } from './components/company/team/team-member/team-member.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { MapsComponent } from './components/company/maps/maps.component';
 import { VacanciesComponent } from './components/company/vacancies/vacancies.component';
 import { HomeProductsComponent } from './components/home/home-products/home-products.component';
 import { NavDropdownComponent } from './components/shared/header/nav-dropdown/nav-dropdown.component';
@@ -42,6 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
 import { ContactDetailsComponent } from './components/contact/contact-details/contact-details.component';
 import { HomeWorkedWithComponent } from './components/home/home-worked-with/home-worked-with.component';
+import { ConsumersWorkedWithComponent } from './components/products/serviceplug/consumers/consumers-worked-with/consumers-worked-with.component';
+import { MapsComponent } from './components/contact/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { HomeWorkedWithComponent } from './components/home/home-worked-with/home
     ContactFormComponent,
     ContactDetailsComponent,
     HomeWorkedWithComponent,
+    ConsumersWorkedWithComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,7 +91,7 @@ import { HomeWorkedWithComponent } from './components/home/home-worked-with/home
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
