@@ -11,10 +11,6 @@
   background-image: url(src/assets/images/home/whitelabeling_background.png);
 }
 #consulting-col {
-  background-image: url(src/assets/images/home/consulting_background.jpg);
-}
-// Fourth image must have a 15deg rotated version to be displayed properly
-#consulting-col-2 {
   background-image: url(src/assets/images/home/consulting_background_rotated.jpg);
 }
 /*********************************************************************************************/
@@ -25,10 +21,6 @@
 .row-small {
   display: none;
 }
-.product-content {
-  color: var(--bg-light);
-  text-shadow: 1px 1px 0px #000000;
-}
 .product-background {
   background-position: center;
   background-size: cover;
@@ -36,23 +28,13 @@
 .small-display-second-row {
   border-top: 0.1rem solid var(--bg-light);
 }
-.gradient-background {
-  background: linear-gradient(
-    150deg,
-    rgba(46, 46, 46, 0.25) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(46, 46, 46, 0.25) 100%
-  );
-}
-.product-content * {
-  font-weight: bold;
-}
 article .container-fluid .row .col-lg:nth-child(even) {
   background-color: var(--bg-primary-light);
 }
 article .container-fluid .row .col-lg:nth-child(odd),
 #products-container {
-  background-color: #d0d0d0 /*var(--bg-light)*/;
+  background-color: #e0e0e0;
+  //background-color: var(--bg-primary);
 }
 .with-border {
   border-left: 0.1rem solid var(--bg-light);
@@ -68,56 +50,33 @@ article .container-fluid .row {
  * Small screens styles
  *********************************************************************************************/
 @media (max-width: 991.9px) {
-  .first-col {
-    margin-top: -10%;
-    padding-top: 3rem;
+  .product-content {
+    transform: rotate(-10deg);
+  }
+  .products-row > .row {
+    margin-top: -10% !important;
+    margin-bottom: -10% !important;
   }
   .product-col {
     transform: rotate(10deg);
-    margin-left: -15%;
-    min-width: 135% !important;
+    min-width: 140%;
+    margin-left: -20%;
   }
-  .border-col,
   .product-content {
-    transform: rotate(-10deg);
-    height: 130% !important;
+    padding-left: 20%;
+    padding-right: 20%;
   }
   .with-border {
     border-top: 0.1rem solid var(--bg-light);
     border-bottom: 0.1rem solid var(--bg-light);
   }
-  .padding-left-2,
-  .padding-left-4,
-  .padding-left-5,
-  .padding-left-6 {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-  .padding-top-10 {
-    padding-top: 7rem !important;
-  }
-  .content-div {
-    padding-left: 18%;
-    padding-right: 15%;
-    padding-bottom: 15rem !important;
-  }
-
-  // Fixes the space below the second button on mobile
-  .button-2 {
-    margin-bottom: 1rem;
-  }
-}
-@media (min-width: 576px) and (max-width: 991.9px) {
-  #fourth-col {
-    margin-top: -8% !important;
-  }
 }
 @media (max-width: 575.9px) {
-  .border-col,
-  .product-content {
-    transform: rotate(-10deg);
-    height: 130% !important;
-    margin-top: -10%;
+  .padding-top-10 {
+    padding-top: 5rem !important;
+  }
+  .padding-bottom-10 {
+    padding-bottom: 5rem !important;
   }
 }
 
@@ -126,10 +85,6 @@ article .container-fluid .row {
  *********************************************************************************************/
 @media (min-width: 992px) {
   // Transitions and styles for the content divs that appear on hover
-  .product-col:hover .product-presentation {
-    padding-right: 5rem;
-    padding-left: 2rem;
-  }
   .product-col:hover .product-presentation > * {
     opacity: 1;
     transform: none;
@@ -150,8 +105,23 @@ article .container-fluid .row {
   .product-col:hover {
     flex-grow: 2;
   }
+  .product-col:hover .darkened-content {
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+  }
 
   // Other styles for large screens
+  .content-div {
+    padding-left: 17% !important;
+    padding-right: 17% !important;
+  }
+  .first-content-div {
+    padding-left: 6rem !important;
+  }
+  .products-row {
+    margin-left: -6% !important;
+    margin-right: -6% !important;
+  }
   .height-vp-full-with-header {
     height: calc(100vh - 80px - 0.3rem);
   }
@@ -166,6 +136,8 @@ article .container-fluid .row {
     padding: 0 !important;
     height: 110vh;
     transition: 0.1s ease-in;
+    -webkit-transform-origin: 50% 55%;
+    transform-origin: 50% 55%;
   }
   .border-col {
     margin-left: -50%;

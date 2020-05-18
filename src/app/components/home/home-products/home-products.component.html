@@ -3,41 +3,39 @@
     id="products-container"
     class="container-fluid p-0 border-top-secondary border-bottom-secondary"
   >
-    <!-- LARGER DISPLAY - SINGLE ROW (not displayed on small screens) -->
-    <div class="row mr-0 row-large product-row">
+    <div class="row m-0 row-large products-row">
       <div class="row m-0 width-100 height-vp-full-with-header">
-        <div class="col-lg product-col first-col">
-          <div
-            class="product-content height-100 border-col gradient-background"
-          >
-            <div id="wifiplug-col" class="product-background height-100">
-              <div
-                class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
-              >
-                <div class="padding-left-2">
-                  <h3>WIFIPLUG</h3>
-                  <h5>
-                    Simplify, schedule and automate daily life.
-                  </h5>
-                </div>
-                <div class="product-presentation">
-                  <h5 class="product-title">
-                    The world's smartest smart plug.
-                  </h5>
-                  <p class="product-text">
-                    The world's smallest, smartest, smart plug. Control your
-                    home from your phone with the WIFIPLUG app and every major
-                    voice assistant.
-                  </p>
-                  <div class="text-center margin-top-5 product-button">
-                    <a
-                      type="link"
-                      class="btn btn-secondary font-weight-bold"
-                      href="https://wifiplug.co.uk/"
-                    >
-                      Details
-                    </a>
-                  </div>
+        <div
+          id="wifiplug-col"
+          class="col-lg product-col z-index-1 product-background with-border"
+        >
+          <div class="product-content height-100">
+            <div
+              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div first-content-div"
+            >
+              <div>
+                <h3 class="text-color-primary font-weight-bold">WIFIPLUG</h3>
+                <h5 class="text-color-secondary">
+                  Simplify, schedule and automate daily life.
+                </h5>
+              </div>
+              <div class="product-presentation">
+                <h5 class="product-title">
+                  The world's smartest smart plug.
+                </h5>
+                <p class="product-text">
+                  The world's smallest, smartest, smart plug. Control your home
+                  from your phone with the WIFIPLUG app and every major voice
+                  assistant.
+                </p>
+                <div class="text-center margin-top-5 product-button button-2">
+                  <a
+                    type="link"
+                    class="btn btn-secondary font-weight-bold"
+                    routerLink="serviceplug"
+                  >
+                    Details
+                  </a>
                 </div>
               </div>
             </div>
@@ -51,9 +49,9 @@
             <div
               class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
             >
-              <div class="padding-left-5 ml-2">
-                <h3>SERVICEPLUG</h3>
-                <h5>
+              <div>
+                <h3 class="text-color-primary font-weight-bold">SERVICEPLUG</h3>
+                <h5 class="text-color-secondary">
                   Manage your appliances, and extend their lifespan.
                 </h5>
               </div>
@@ -81,70 +79,36 @@
           </div>
         </div>
         <div
-          class="col-lg product-col z-index-1 gradient-background with-border"
+          id="whitelabel-col"
+          class="col-lg product-col z-index-1 product-background with-border"
         >
-          <div id="whitelabel-col" class="product-background height-100">
-            <div class="product-content height-100">
-              <div
-                class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
-              >
-                <div class="padding-left-5 ml-2">
-                  <h3>White Labelling</h3>
-                  <h5>
-                    Rebrand our products for your own business.
-                  </h5>
-                </div>
-                <div class="product-presentation">
-                  <h5 class="product-title">
-                    Detect faults with your appliances, before they happen.
-                  </h5>
-                  <p class="product-text">
-                    Our machine learning can detect potential faults with your
-                    machine, before they become problems - statistics show that
-                    predictive maintenance can add an extra two years to your
-                    machine's lifespan!
-                  </p>
-                  <div class="text-center margin-top-5 product-button">
-                    <a
-                      type="link"
-                      class="btn btn-secondary font-weight-bold"
-                      routerLink="whitelabel"
-                    >
-                      Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="fourth-col" class="col-lg product-col">
-          <div
-            id="consulting-col"
-            class="product-content height-100 border-col product-background"
-          >
+          <div class="product-content height-100">
             <div
-              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div gradient-background"
+              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
             >
-              <div class="padding-left-6">
-                <h3>Consulting</h3>
-                <h5>Brilliant solutions. <br />Profitable results.</h5>
+              <div>
+                <h3 class="text-color-primary font-weight-bold">
+                  White Labelling
+                </h3>
+                <h5 class="text-color-secondary">
+                  Our products. <br />Your business.
+                </h5>
               </div>
               <div class="product-presentation">
                 <h5 class="product-title">
-                  Detect faults with your appliances, before they happen.
+                  Rebrand our products for your own business.
                 </h5>
                 <p class="product-text">
-                  Our machine learning can detect potential faults with your
-                  machine, before they become problems - statistics show that
-                  predictive maintenance can add an extra two years to your
-                  machine's lifespan!
+                  We provide you the blank product, on which you can apply your
+                  own logo and other information. The smart plug can be managed
+                  with the dedicated app, which you can also personalise with
+                  your logo.
                 </p>
-                <div class="text-center margin-top-5 product-button">
+                <div class="text-center margin-top-5 product-button button-2">
                   <a
                     type="link"
                     class="btn btn-secondary font-weight-bold"
-                    routerLink="consulting"
+                    routerLink="serviceplug"
                   >
                     Details
                   </a>
@@ -153,144 +117,34 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- SMALLER DISPLAY - TWO ROWS (not displayed on large screens) -->
-    <div class="row mr-0 row-small">
-      <!-- FIRST ROW -->
-      <div class="row height-vp-full-with-header">
-        <div class="col product-col">
-          <div
-            class="product-content height-100 border-col gradient-background"
-          >
-            <div id="wifiplug-col" class="product-background height-100">
-              <div
-                class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
-              >
-                <div class="padding-left-2">
-                  <h3>WifiPlug</h3>
-                  <h5>
-                    Simplify, schedule and automate daily life.
-                  </h5>
-                </div>
-                <div class="product-presentation">
-                  <h5 class="product-title">
-                    The world's smartest smart plug.
-                  </h5>
-                  <p class="product-text">
-                    The world's smallest, smartest, smart plug. Control your
-                    home from your phone with the WIFIPLUG app and every major
-                    voice assistant.
-                  </p>
-                  <div class="text-center margin-top-5 product-button">
-                    <a
-                      type="link"
-                      class="btn btn-secondary font-weight-bold"
-                      href="https://wifiplug.co.uk/"
-                    >
-                      Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div
-          id="serviceplug-col"
-          class="col product-col z-index-1 product-background with-border"
+          id="consulting-col"
+          class="col-lg product-col z-index-1 product-background with-border"
         >
           <div class="product-content height-100">
             <div
-              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
+              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div last-content-div"
             >
-              <div class="padding-left-4">
-                <h3>ServicePlug</h3>
-                <h5>
-                  Manage your appliances, and extend their lifespan.
+              <div>
+                <h3 class="text-color-primary font-weight-bold">Consulting</h3>
+                <h5 class="text-color-secondary">
+                  Brilliant solutions. <br />Profitable results.
                 </h5>
               </div>
               <div class="product-presentation">
                 <h5 class="product-title">
-                  Detect faults with your appliances, before they happen.
+                  Work with us to get better results.
                 </h5>
                 <p class="product-text">
-                  Our machine learning can detect potential faults with your
-                  machine, before they become problems - statistics show that
-                  predictive maintenance can add an extra two years to your
-                  machine's lifespan!
+                  We have worked with a lot of companies, to provide them the
+                  best solution adapted to their problems.
                 </p>
-                <div class="text-center margin-top-5 product-button">
-                  <a type="link" class="btn btn-secondary font-weight-bold">
-                    Details
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- SECOND ROW -->
-      <div class="row height-vp-full-with-header small-display-second-row">
-        <div class="col product-col">
-          <div
-            class="product-content height-100 border-col gradient-background"
-          >
-            <div id="whitelabel-col" class="product-background height-100">
-              <div
-                class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
-              >
-                <div class="padding-left-2">
-                  <h3>White Labelling</h3>
-                  <h5>
-                    Rebrand our products for your own business.
-                  </h5>
-                </div>
-                <div class="product-presentation">
-                  <h5 class="product-title">
-                    Detect faults with your appliances, before they happen.
-                  </h5>
-                  <p class="product-text">
-                    Our machine learning can detect potential faults with your
-                    machine, before they become problems - statistics show that
-                    predictive maintenance can add an extra two years to your
-                    machine's lifespan!
-                  </p>
-                  <div class="text-center margin-top-5 product-button">
-                    <a type="link" class="btn btn-secondary font-weight-bold">
-                      Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="consulting-col-2"
-          class="col product-col z-index-1 product-background with-border"
-        >
-          <div class="product-content height-100">
-            <div
-              class="height-100 d-flex flex-column justify-content-between padding-top-10 padding-bottom-10 content-div"
-            >
-              <div class="padding-left-4">
-                <h3>Consulting</h3>
-                <h5>Brilliant solutions. <br />Profitable results.</h5>
-              </div>
-              <div class="product-presentation">
-                <h5 class="product-title">
-                  Detect faults with your appliances, before they happen.
-                </h5>
-                <p class="product-text">
-                  Our machine learning can detect potential faults with your
-                  machine, before they become problems - statistics show that
-                  predictive maintenance can add an extra two years to your
-                  machine's lifespan!
-                </p>
-                <div class="text-center margin-top-5 product-button">
-                  <a type="link" class="btn btn-secondary font-weight-bold">
+                <div class="text-center margin-top-5 product-button button-2">
+                  <a
+                    type="link"
+                    class="btn btn-secondary font-weight-bold"
+                    routerLink="serviceplug"
+                  >
                     Details
                   </a>
                 </div>
