@@ -97,6 +97,7 @@
     margin: 0 !important;
     position: absolute !important;
     top: 65% !important;
+    left: calc(50% - 0.3rem) !important; // Fixes the arrow position on Safari
   }
   .menudown,
   .menuright {
