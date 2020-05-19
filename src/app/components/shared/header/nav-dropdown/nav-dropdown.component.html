@@ -1,11 +1,17 @@
-<hr class="m-0 d-lg-none">
-<li class="nav-item" [class.dropdown]="direction==='down'" [class.dropright]="direction==='right'" [class.active]="isActive() && (!inDropdown)"
-[class.activeInDropdown]="isActive() && (inDropdown)">
+<hr class="m-0 d-lg-none" />
+<li
+  class="nav-item"
+  [class.dropdown]="direction === 'down'"
+  [class.dropright]="direction === 'right'"
+  [class.active]="isActive() && !inDropdown"
+  [class.activeInDropdown]="isActive() && inDropdown"
+>
   <!-- NOT CLICKABLE VERSION -->
   <a
     *ngIf="!clickable"
-    [class.toggledown]="direction==='down'"
-    [class.toggleright]="direction==='right'"
+    [class.toggledown]="direction === 'down'"
+    [class.toggleright]="direction === 'right'"
+    [class.disabledDropdown]="disabledDropdown"
     class="nav-link dropdown-toggle"
     href="#"
     role="button"
@@ -18,8 +24,9 @@
   <!-- CLICKABLE VERSION -->
   <a
     *ngIf="clickable"
-    [class.toggledown]="direction==='down'"
-    [class.toggleright]="direction==='right'"
+    [class.toggledown]="direction === 'down'"
+    [class.toggleright]="direction === 'right'"
+    [class.disabledDropdown]="disabledDropdown"
     class="nav-link dropdown-toggle dropdown-clickable"
     href="#"
     role="button"
@@ -30,7 +37,13 @@
   >
     {{ text }}
   </a>
-  <div class="dropdown-menu shadow-sm" [class.menudown]="direction==='down'" [class.menuright]="direction==='right'" aria-labelledby="navbarDropdown">
+  <div
+    *ngIf="!disabledDropdown"
+    class="dropdown-menu shadow-sm"
+    [class.menudown]="direction === 'down'"
+    [class.menuright]="direction === 'right'"
+    aria-labelledby="navbarDropdown"
+  >
     <ng-content></ng-content>
   </div>
 </li>

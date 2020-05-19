@@ -51,6 +51,9 @@
     opacity: 1;
   }
 }
+.disabledDropdown::after {
+  display: none !important;
+}
 
 /*********************************************************************************************
  * Small screens styles

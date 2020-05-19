@@ -37,10 +37,13 @@ export class NavDropdownComponent implements AfterViewInit {
   private _active: boolean = false;
 
   // Indicates if this NavDropdownComponent is in a dropdown menu or not
-  @Input() inDropdown = false;
+  @Input() inDropdown: boolean = false;
 
   // Indicates if this NavDropdownComponent is clickable (if this is also a link to another page)
   @Input() clickable: boolean;
+
+  // Indicates if the dropdown menu will appear on hover or not
+  @Input() disabledDropdown: boolean;
 
   // Indicates the direction in which the dropdown menu will appear
   @Input() direction: string;
